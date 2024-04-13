@@ -1,0 +1,167 @@
+html,
+body {
+  font-size: 16px;
+  margin: 0;
+}
+
+body,
+#root {
+  position: relative;
+  background: transparent;
+}
+
+a {
+  color: var(--link-color-1);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#notification-portal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999999;
+}
+
+#modal-portal {
+  position: relative;
+  z-index: 9999999;
+}
+
+#cascader-portal {
+  position: relative;
+  z-index: 99999999;
+}
+
+:root {
+  --font-family-apple: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+  --font-family-code: ui-monospace, Menlo, Consolas, Monaco, monospace;
+  --font-family-default: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular',
+    sans-serif;
+  --font-family-segoe: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+
+  --fds-soft: cubic-bezier(0.08, 0.52, 0.52, 1);
+  --fds-animation-enter-exit-in: cubic-bezier(0.14, 1, 0.34, 1);
+  --fds-animation-enter-exit-out: cubic-bezier(0.45, 0.1, 0.2, 1);
+  --fds-animation-swap-shuffle-in: cubic-bezier(0.14, 1, 0.34, 1);
+  --fds-animation-swap-shuffle-out: cubic-bezier(0.45, 0.1, 0.2, 1);
+  --fds-animation-move-in: cubic-bezier(0.17, 0.17, 0, 1);
+  --fds-animation-move-out: cubic-bezier(0.17, 0.17, 0, 1);
+  --fds-animation-expand-collapse-in: cubic-bezier(0.17, 0.17, 0, 1);
+  --fds-animation-expand-collapse-out: cubic-bezier(0.17, 0.17, 0, 1);
+  --fds-animation-passive-move-in: cubic-bezier(0.5, 0, 0.1, 1);
+  --fds-animation-passive-move-out: cubic-bezier(0.5, 0, 0.1, 1);
+  --fds-animation-quick-move-in: cubic-bezier(0.1, 0.9, 0.2, 1);
+  --fds-animation-quick-move-out: cubic-bezier(0.1, 0.9, 0.2, 1);
+  --fds-animation-fade-in: cubic-bezier(0, 0, 1, 1);
+  --fds-animation-fade-out: cubic-bezier(0, 0, 1, 1);
+
+  --fds-fast: 200ms;
+  --fds-duration-extra-extra-short-in: 100ms;
+  --fds-duration-extra-extra-short-out: 100ms;
+  --fds-duration-extra-short-in: 200ms;
+  --fds-duration-extra-short-out: 150ms;
+  --fds-duration-short-in: 280ms;
+  --fds-duration-short-out: 200ms;
+  --fds-duration-medium-in: 400ms;
+  --fds-duration-medium-out: 350ms;
+  --fds-duration-long-in: 500ms;
+  --fds-duration-long-out: 350ms;
+  --fds-duration-extra-long-in: 1000ms;
+  --fds-duration-extra-long-out: 1000ms;
+  --fds-duration-none: 0ms;
+}
+
+:root {
+  --surface-background: url(./images/noise_white.png);
+  --header-height: 56px;
+  --footer-height: 186px;
+  --content-top-padding: 32px;
+
+  --neutral-gradient: linear-gradient(346deg, #f1f6ff 50%, #ffffff 100%);
+
+  --hover-overlay: rgba(0, 0, 0, 0.05);
+  --image-overlay: rgba(52, 51, 85, 0.6);
+
+  --primary-color-1: rgb(86, 56, 255);
+  --link-color-1: rgb(86, 56, 255);
+
+  --secondary-color-1: #3324d5;
+  --secondary-color-3: #7d42fb;
+  --secondary-color-4: #2ff2b8;
+  --secondary-color-5: #ffcd42;
+
+  --neutral-color-800: #222157;
+  --neutral-color-700: #4a4566;
+  --neutral-color-600: #6e7191;
+  --neutral-color-500: #a0a3bd;
+  --neutral-color-400: #dcddeb;
+  --neutral-color-300: #eff0f6;
+  --neutral-color-200: #f7f7fc;
+  --neutral-color-100: #ffffff;
+
+  --toolbar-background: #fff;
+
+  --dockerfile-editor-background: #f7f7fc;
+
+  --logs-background: rgb(34, 33, 87);
+  --logs-text-color: #fff;
+
+  --card-background: #ffffff;
+
+  --surface: #fff;
+  --border-color: #eff0f6;
+  --border-active-color: #563aff;
+  --button-primary-text-color: #ffffff;
+  --button-primary-color-hoverlay: #3324d5;
+  --button-secondary-color-hoverlay: #f7f7fc;
+
+  --neutral-color-200-transparent: rgb(247, 247, 252, 0.85);
+
+  --blue-400: #086cd9;
+  --blue-300: #1d88fe;
+  --blue-200: #8fc3ff;
+  --blue-100: #eaf4ff;
+
+  --red-400: #dc2b2b;
+  --red-300: #ff5a65;
+  --red-200: #ffbec2;
+  --red-100: #ffeff0;
+
+  --orange-400: #d5691b;
+  --orange-300: #ff9e2c;
+  --orange-200: #ffd19b;
+  --orange-100: #fff3e4;
+
+  --green-400: #11845b;
+  --green-300: #05c168;
+  --green-200: #7fdca4;
+  --green-100: #def2e6;
+
+  --done: #2ff2b8;
+
+  --blue-solid-color: #140fff;
+  --pink-solid-color: #ff52cf;
+  --yellow-solid-color: #ffcd1d;
+  --red-solid-color: #ff2e00;
+  --orange-solid-color: #ff6752;
+  --green-solid-color: #1dff85;
+  --cyan-solid-color: #00c2ff;
+  --squares: rgb(233 233 239);
+
+  --always-white: white;
+  --always-dark: rgb(34, 33, 87);
+
+  --shadow-1: 0px 2px 6px 0 rgba(7, 7, 10, 0.06);
+  --shadow-2: 0px 2px 15px 0 rgba(33, 31, 84, 0.06);
+
+  --shadow-1-color: 0px 4px 10px 0 rgba(74, 58, 255, 0.06);
+  --shadow-2-color: 0px 6px 20px 0 rgba(74, 58, 255, 0.08);
+  --shadow-3-color: 0px 10px 28px 0 rgba(74, 58, 255, 0.12);
+
+  --shadow-1-white: 0px 4px 10px 0 rgba(20, 20, 43, 0.04);
+}
