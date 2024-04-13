@@ -253,15 +253,13 @@ app.use((req, res, next) => {
   // eslint-disable-next-line no-underscore-dangle
   const queryURL = req._parsedUrl.query;
 
-  if (host.includes('es.') && host.includes('en.')) {
+  if (host.includes('es.') || host.includes('en.')) {
     return res
       .status(302)
       .redirect(
         `https://${process.env.BASE_DOMAIN}${req?.path ?? ''}${queryURL ? `?${queryURL}` : ''}`,
       );
   }
-
-  if (!host.includes('serpa.cloud')) return next();
 
   return next();
 });
