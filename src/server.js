@@ -96,71 +96,82 @@ async function renderReactApp(req, res) {
                 __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WCHPZC5X');`,
               }}
             />
-            <style>
-              {`
-      @font-face {
-        font-family: 'SF Pro Display';
-        font-style: normal;
-        font-weight: 100;
-        src: local('☺'), url('./fonts/sf-pro-display_ultralight.woff2') format('woff2');
-      }
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `@font-face {
+                  font-family: 'SF Pro Display';
+                  font-style: normal;
+                  font-weight: 100;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-display_ultralight.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Display';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local('☺'), url('${process.env.CLOUDFRONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-display_regular.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Text';
+                  font-style: normal;
+                  font-weight: 700;
+                  src: local('☺'), url('${process.env.CLOUDFRONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-text_bold.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Text';
+                  font-style: normal;
+                  font-weight: 600;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-text_semibold.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Display';
+                  font-style: normal;
+                  font-weight: 600;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-display_semibold.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Text';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-text_regular.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Icons';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-icons_regular.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Display';
+                  font-style: normal;
+                  font-weight: 500;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-display_medium.woff2') format('woff2');
+                }
+          
+                @font-face {
+                  font-family: 'SF Pro Display';
+                  font-style: normal;
+                  font-weight: 300;
+                  src: local('☺'), url('${process.env.FONT_DISTRIBUTION ??
+                    '.'}/fonts/sf-pro-display_light.woff2') format('woff2');
+                }`,
+              }}
+            />
 
-      @font-face {
-        font-family: 'SF Pro Display';
-        font-style: normal;
-        font-weight: 400;
-        src: local('☺'), url('./fonts/sf-pro-display_regular.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Text';
-        font-style: normal;
-        font-weight: 700;
-        src: local('☺'), url('./fonts/sf-pro-text_bold.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Text';
-        font-style: normal;
-        font-weight: 600;
-        src: local('☺'), url('./fonts/sf-pro-text_semibold.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Display';
-        font-style: normal;
-        font-weight: 600;
-        src: local('☺'), url('./fonts/sf-pro-display_semibold.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Text';
-        font-style: normal;
-        font-weight: 400;
-        src: local('☺'), url('./fonts/sf-pro-text_regular.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Icons';
-        font-style: normal;
-        font-weight: 400;
-        src: local('☺'), url('./fonts/sf-pro-icons_regular.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Display';
-        font-style: normal;
-        font-weight: 500;
-        src: local('☺'), url('./fonts/sf-pro-display_medium.woff2') format('woff2');
-      }
-
-      @font-face {
-        font-family: 'SF Pro Display';
-        font-style: normal;
-        font-weight: 300;
-        src: local('☺'), url('./fonts/sf-pro-display_light.woff2') format('woff2');
-      }`}
-            </style>
             <link
               href={
                 isDevelopment
