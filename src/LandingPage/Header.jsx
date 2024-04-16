@@ -26,6 +26,7 @@ const styles = stylex.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     maxWidth: '100vw',
+    transform: 'translateY(-100%)',
   },
   show: {
     transform: 'translateY(0%)',
@@ -92,7 +93,7 @@ const styles = stylex.create({
 });
 
 function Header({ width }: Props): React$Node {
-  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(true);
 
   const observer = useMemo(
     () =>
@@ -113,18 +114,18 @@ function Header({ width }: Props): React$Node {
     };
   }, [observer]);
 
-  console.log({ isIntersecting });
-
   return (
     <animated.header
       className={stylex(styles.header, isIntersecting ? styles.hide : styles.show)}
       role="banner"
       style={{ width }}
     >
-      <div className={stylex(styles.logo)}>
-        <IconLogo width={36} />
-        <div className={stylex(styles.logoText)}>serpa cloud</div>
-      </div>
+      <a href="/">
+        <div className={stylex(styles.logo)}>
+          <IconLogo width={36} />
+          <div className={stylex(styles.logoText)}>serpa cloud</div>
+        </div>
+      </a>
       <div className={stylex(styles.links)}>
         <a href="/session/signin" className={stylex(styles.singleLink)}>
           Sign in

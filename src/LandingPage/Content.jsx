@@ -65,32 +65,6 @@ const styles = stylex.create({
 function Content(): React$Node {
   const trustedRef = useRef();
 
-  const [modalSpringProps] = useSpring(
-    () => ({
-      from: { opacity: 0.8, y: 200 },
-      to: { opacity: 1, y: 0 },
-      config: {
-        mass: 2,
-        friction: 40,
-        tension: 140,
-      },
-    }),
-    [],
-  );
-
-  const [heroImageProps] = useSpring(
-    () => ({
-      from: { y: 80 },
-      to: { y: 0 },
-      config: {
-        mass: 2,
-        friction: 40,
-        tension: 140,
-      },
-    }),
-    [],
-  );
-
   const [calabiStyles, animateCalabi] = useSpring(
     () => ({
       y: 0,
@@ -147,20 +121,16 @@ function Content(): React$Node {
 
   return (
     <div>
-      <animated.div
-        className={stylex(styles.main)}
-        style={modalSpringProps}
-        id="landingScrollElement"
-      >
+      <div className={stylex(styles.main)} id="landingScrollElement">
         <HeroCard>
-          <animated.div className={stylex(styles.heroImageContainer)} style={heroImageProps}>
+          <div className={stylex(styles.heroImageContainer)}>
             <animated.img
               src={calabi}
               alt="Decentralized Cloud Computing"
               className={stylex(styles.heroImage)}
               style={calabiStyles}
             />
-          </animated.div>
+          </div>
 
           <Hero />
 
@@ -180,7 +150,7 @@ function Content(): React$Node {
 
           <Footer />
         </HeroCard>
-      </animated.div>
+      </div>
     </div>
   );
 }
