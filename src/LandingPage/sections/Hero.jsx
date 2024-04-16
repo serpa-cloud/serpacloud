@@ -213,7 +213,7 @@ function Hero(): React$Node {
   });
 
   return (
-    <section className={stylex(styles.heroSection)}>
+    <section className={stylex(styles.heroSection)} id="hero">
       <div className={stylex(styles.centered)}>
         <div className={stylex(styles.heroTitle)}>
           <div className={stylex(styles.heroContent)}>

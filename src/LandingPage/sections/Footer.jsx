@@ -31,10 +31,12 @@ const styles = stylex.create({
     alignItems: 'center',
   },
   logoText: {
-    fontSize: 24,
+    fontSize: 20,
     color: 'var(--neutral-color-800)',
-    fontWeight: 300,
-    letterSpacing: '.01em',
+    fontWeight: 400,
+    letterSpacing: '.4em',
+    lineHeight: '0.85',
+    fontVariant: 'small-caps',
     opacity: 0.85,
     fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
   },
@@ -88,11 +90,11 @@ const styles = stylex.create({
 
 function Footer(): React$Node {
   return (
-    <footer className={stylex(styles.main)}>
+    <footer className={stylex(styles.main)} role="contentinfo">
       <div className={stylex(styles.linksRoot)}>
         <div className={stylex(styles.logo)}>
-          <IconLogo width={48} />
-          <div className={stylex(styles.logoText)}>Serpa Cloud</div>
+          <IconLogo width={36} />
+          <div className={stylex(styles.logoText)}>serpa cloud</div>
         </div>
 
         <div className={stylex(styles.linksList)}>

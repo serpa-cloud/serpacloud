@@ -4,6 +4,7 @@ import { useSpring, animated } from 'react-spring';
 import { useRef, useState, useEffect, memo } from 'react';
 
 import noiseUrl from './assets/noise.png';
+import Header from './Header';
 
 type Props = {|
   children: React$Node,
@@ -69,6 +70,7 @@ function HeroCard({ children }: Props): React$Node {
         const spaceDifference = Math.min(window.innerWidth, 1800) - widthReference;
 
         const newActive = scale < 1;
+
         if (newActive !== hoverActive) setHoverActive(scale < 1);
 
         animate.start({
@@ -111,6 +113,7 @@ function HeroCard({ children }: Props): React$Node {
         ...style,
       }}
     >
+      <Header width={style.width} />
       {children}
     </animated.div>
   );
