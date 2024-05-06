@@ -1,0 +1,16 @@
+{
+  "input.requiredError": "Este campo es requerido",
+
+  "contact.title": "Descubre cómo podemos simplificar sus operaciones en la nube en menos de 2 semanas",
+  "contactForm.title": "Charlemos sobre tu proyecto",
+  "contact.dot1": "Hablar con un ingeniero Zeet",
+  "contact.dot2": "Discute la arquitectura de tu proyecto.",
+  "contact.dot3": "Crea un plan de migración que te ayude a validar la adaptación antes de pagar",
+  "contactForm.firstName": "Nombre *",
+  "contactForm.lastName": "Apellido *",
+  "contactForm.workName": "Mail corporativo *",
+  "contactForm.phone": "Teléfono *",
+  "contactForm.help": "¿Cómo podemos ayudar?",
+  "contactForm.hearAbout": "¿Cómo te enteraste de Zeet?",
+  "contactForm.submit": "ENVIAR"
+}
