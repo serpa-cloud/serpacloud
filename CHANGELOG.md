@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.3](https://github.com/yellow-code-io/serpacloud/compare/v1.2.2...v1.2.3) (2024-05-08)
+
+
+### Bug Fixes
+
+* **server:** redirect product to app domain ([ce69fb5](https://github.com/yellow-code-io/serpacloud/commit/ce69fb50ce280661a9cfb139e9a3a06bf2007277))
+
 ### [1.2.2](https://github.com/yellow-code-io/serpacloud/compare/v1.2.1...v1.2.2) (2024-05-08)
 
 
