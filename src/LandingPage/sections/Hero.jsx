@@ -241,7 +241,10 @@ function Hero(): React$Node {
               Deploy, Scale and Deliver Applications faster than ever.
             </p>
             <div className={stylex(styles.toolbar)}>
-              <a href="/session/signup" className={stylex(styles.mainButton)}>
+              <a
+                href="https://app.serpa.cloud/session/signup"
+                className={stylex(styles.mainButton)}
+              >
                 start here
               </a>
             </div>

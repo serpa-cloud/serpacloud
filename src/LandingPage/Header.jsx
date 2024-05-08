@@ -127,11 +127,11 @@ function Header({ width }: Props): React$Node {
         </div>
       </a>
       <div className={stylex(styles.links)}>
-        <a href="/session/signin" className={stylex(styles.singleLink)}>
+        <a href="https://app.serpa.cloud/session/signin" className={stylex(styles.singleLink)}>
           Sign in
         </a>
 
-        <a href="/session/signup" className={stylex(styles.button)}>
+        <a href="https://app.serpa.cloud/session/signup" className={stylex(styles.button)}>
           Get Started
         </a>
       </div>
