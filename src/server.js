@@ -266,6 +266,10 @@ app.use((req, res, next) => {
 
 app.use(cookieParser());
 
+app.use('/app', async (_, res) => {
+  return res.status(302).redirect('https://app.serpa.cloud');
+});
+
 app.get('/', async (req, res) => {
   return renderReactApp(req, res);
 });
