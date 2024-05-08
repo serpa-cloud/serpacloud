@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/yellow-code-io/serpacloud/compare/v1.2.1...v1.2.2) (2024-05-08)
+
+
+### Bug Fixes
+
+* change links to serpa ccloud app ([f0b1331](https://github.com/yellow-code-io/serpacloud/commit/f0b133198734a56d0dcb31ac24daf4ec51eb761f))
+
 ### [1.2.1](https://github.com/yellow-code-io/serpacloud/compare/v1.2.0...v1.2.1) (2024-04-16)
 
 
