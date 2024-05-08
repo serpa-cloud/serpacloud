@@ -10,7 +10,7 @@ const styles = stylex.create({
     backgroundImage: `var(--surface-background), var(--neutral-gradient)`,
   },
   body: {
-    width: '100vw',
+    width: '100%',
   },
 });
 

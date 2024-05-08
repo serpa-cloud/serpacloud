@@ -13,6 +13,7 @@ import Grid from './Grid';
 import Icon from './Icon';
 import Input, { useInput, validateData } from './Input';
 import InteractiveElement from './InteractiveElement';
+import Margin from './Margin';
 import Padding from './Padding';
 import Spinner from './Spinner';
 import Text from './Text';
@@ -40,6 +41,7 @@ export {
   Icon,
   Input,
   InteractiveElement,
+  Margin,
   Padding,
   Spinner,
   Text,
