@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import Analytics from './Analytics';
 import LandingPage from './LandingPage';
 import ContactUs from './ContactUs';
+import Tutorials from './Tutorials';
 
 import spanishTranslations from './translations/spanish.json';
 import englishTranslations from './translations/english.json';
@@ -26,6 +27,7 @@ function App({ locale }: Props): React$Node {
       <Analytics>
         <Routes>
           <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/tutorials" element={<Tutorials />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
       </Analytics>
