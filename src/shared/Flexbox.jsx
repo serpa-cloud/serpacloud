@@ -979,7 +979,7 @@ function Flexbox({
     <div
       className={`${className || ''} ${stylex(
         styles.common,
-        styles[flexWrap ? `alignContent-${flexWrap}` : 'flexWrap-nowrap'],
+        styles[flexWrap ? `flexWrap-${flexWrap}` : 'flexWrap-nowrap'],
         styles[`flexDirection-${flexDirection}`],
         styles[`alignItems-${alignItems}`],
         styles[`alignContent-${alignContent}`],

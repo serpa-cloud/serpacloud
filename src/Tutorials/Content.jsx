@@ -2,7 +2,7 @@
 import stylex from '@serpa-cloud/stylex';
 import { memo } from 'react';
 
-import { Flexbox, Grid, Padding, Text } from '../shared';
+import { Grid, Padding } from '../shared';
 
 import VideoContainer from './VideoContainer';
 
@@ -54,88 +54,16 @@ function Content(): React$Node {
               columnGap={32}
             >
               <VideoContainer />
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
+              <VideoContainer />
+              <VideoContainer />
 
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
+              <VideoContainer />
+              <VideoContainer />
+              <VideoContainer />
 
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
-              <Flexbox flexDirection="column" rowGap={16}>
-                <div className={stylex(styles.thumbContainer)} />
-                <Text type="bl" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </Text>
-                <Text type="bs" color="--neutral-color-100">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                  justo, eget fringilla lorem facilisis eu.
-                </Text>
-              </Flexbox>
+              <VideoContainer />
+              <VideoContainer />
+              <VideoContainer />
             </Grid>
           </Padding>
         </div>

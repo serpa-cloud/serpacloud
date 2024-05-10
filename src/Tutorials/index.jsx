@@ -3,6 +3,7 @@ import { memo } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
 import Grid from '../LandingPage/Grid';
+import Header from './Header';
 import Content from './Content';
 
 const styles = stylex.create({
@@ -19,6 +20,7 @@ function Tutorials(): React$Node {
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
         <Grid />
+        <Header />
         <Content />
       </div>
     </main>
