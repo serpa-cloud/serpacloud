@@ -1,0 +1,47 @@
+import image1 from './images/image1.png';
+
+export default {
+  'build-and-deploy-automatically': {
+    id: 'cPr7V2ikPTA',
+    title: 'Build and Deploy automatically from a Git Repository using Buildpacks',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis justo, eget fringilla lorem facilisis eu.',
+    tags: ['Lorem', 'Lorem ipsum dolor', 'Lorem ipsum', 'Lorem ipsum dolor', 'Lorem'],
+    thumb: image1,
+  },
+  'build-and-deploy-automatically-2': {
+    id: 'cPr7V2ikPTA',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis justo, eget fringilla lorem facilisis eu.',
+    tags: ['Lorem', 'Lorem ipsum', 'Lorem ipsum dolor', 'Lorem'],
+  },
+  'build-and-deploy-automatically-3': {
+    id: 'cPr7V2ikPTA',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis justo, eget fringilla lorem facilisis eu.',
+    tags: ['Lorem', 'Lorem ipsum dolor'],
+  },
+  'build-and-deploy-automatically-4': {
+    id: 'cPr7V2ikPTA',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis justo, eget fringilla lorem facilisis eu.',
+    tags: ['Lorem', 'Lorem ipsum dolor', 'Lorem ipsum', 'Lorem ipsum dolor', 'Lorem'],
+  },
+  'build-and-deploy-automatically-5': {
+    id: 'cPr7V2ikPTA',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis justo, eget fringilla lorem facilisis eu.',
+    tags: ['Lorem', 'Lorem ipsum dolor', 'Lorem ipsum', 'Lorem ipsum dolor', 'Lorem'],
+  },
+  'build-and-deploy-automatically-6': {
+    id: 'cPr7V2ikPTA',
+    title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis justo, eget fringilla lorem facilisis eu.',
+    tags: ['Lorem', 'Lorem ipsum dolor', 'Lorem ipsum', 'Lorem ipsum dolor', 'Lorem'],
+  },
+};

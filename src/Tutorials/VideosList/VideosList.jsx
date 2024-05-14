@@ -2,11 +2,13 @@
 import stylex from '@serpa-cloud/stylex';
 import { memo } from 'react';
 
-import { Grid, Padding } from '../shared';
+import { Grid, Padding } from '../../shared';
 
 import VideoContainer from './VideoContainer';
 
-import useDevice from '../hooks/useDevice';
+import useDevice from '../../hooks/useDevice';
+
+import videosObject from '../videosObject';
 
 const styles = stylex.create({
   main: {
@@ -41,7 +43,7 @@ const styles = stylex.create({
   },
 });
 
-function Content(): React$Node {
+function VideosList(): React$Node {
   const { width } = useDevice();
   return (
     <div className={stylex(styles.main)}>
@@ -53,17 +55,9 @@ function Content(): React$Node {
               rowGap={24}
               columnGap={32}
             >
-              <VideoContainer />
-              <VideoContainer />
-              <VideoContainer />
-
-              <VideoContainer />
-              <VideoContainer />
-              <VideoContainer />
-
-              <VideoContainer />
-              <VideoContainer />
-              <VideoContainer />
+              {Object.keys(videosObject).map((video) => {
+                return <VideoContainer key={video} video={video} />;
+              })}
             </Grid>
           </Padding>
         </div>
@@ -72,4 +66,4 @@ function Content(): React$Node {
   );
 }
 
-export default (memo<{}>(Content): React$AbstractComponent<{}, mixed>);
+export default (memo<{}>(VideosList): React$AbstractComponent<{}, mixed>);

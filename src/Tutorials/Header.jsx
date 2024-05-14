@@ -1,74 +1,119 @@
 // @flow
 import stylex from '@serpa-cloud/stylex';
-import { Text, Grid, Flexbox, Padding, Margin } from '../shared';
+import { memo } from 'react';
 
-import calabi from '../LandingPage/assets/calabi.png';
+import { ReactComponent as IconLogo } from '../shared/images/icon.svg';
 
 const styles = stylex.create({
-  header: {
+  main: {
+    width: '100vw',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 2,
+    boxSizing: 'border-box',
+  },
+  viewport: {
     width: '100%',
     position: 'relative',
     maxWidth: '100%',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
-  container: {
-    width: '100%',
-    maxWidth: 1110,
-    margin: 'auto',
-  },
-  heroImageContainer: {
-    flex: 1,
-    width: '100%',
-    maxWidth: 360,
-    paddingTop: 40,
+  header: {
+    top: 0,
+    zIndex: 99,
+    position: 'fixed',
+    background: 'rgb(14 13 31 / 70%)',
+    backdropFilter: 'saturate(180%) blur(20px)',
+    paddingTop: 16,
     paddingBottom: 16,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    // marginTop: -120,
-    aspectRatio: '1.09',
-    '@media (max-width: 860px)': {
-      maxWidth: 360,
-      // marginTop: -56,
-      paddingTop: 24,
-    },
+    paddingLeft: 24,
+    paddingRight: 24,
+    boxSizing: 'border-box',
+    boxShadow: '0px 2px 6px 4px rgba(7, 7, 10, 0.06)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    maxWidth: '100vw',
+  },
+  logo: {
+    columnGap: 16,
+    display: 'flex',
+    alignItems: 'center',
+  },
+  logoText: {
+    fontSize: 20,
+    color: 'var(--neutral-color-100)',
+    fontWeight: 400,
+    letterSpacing: '.4em',
+    lineHeight: '0.85',
+    fontVariant: 'small-caps',
+    fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
     '@media (max-width: 580px)': {
-      maxWidth: 200,
-      marginTop: 0,
+      display: 'none',
     },
   },
-  heroImage: {
-    width: '100%',
+  links: {
+    display: 'flex',
+    alignItems: 'center',
+    columnGap: 32,
+    '@media (max-width: 580px)': {
+      columnGap: 16,
+    },
+  },
+  button: {
+    letterSpacing: '.05em',
+    lineHeight: '0.85',
+    paddingLeft: 24,
+    paddingRight: 24,
+    height: 48,
+    color: 'var(--neutral-color-800)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
+    fontSize: 16,
+    fontWeight: 500,
+    boxSizing: 'border-box',
+    background: 'white',
+    '@media (max-width: 580px)': {
+      height: 40,
+      paddingLeft: 12,
+      paddingRight: 12,
+    },
+  },
+  singleLink: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 600,
+    letterSpacing: '.05em',
+    lineHeight: '0.85',
+    fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
   },
 });
 
-export default function Header() {
+function Header(): React$Node {
   return (
-    <Margin bottom={32}>
-      <Padding vertical={32} className={stylex(styles.header)} left={24}>
-        <div className={stylex(styles.container)}>
-          <Grid columns="1fr 1fr">
-            <Flexbox justifyContent="center" flexDirection="column" rowGap={16}>
-              <Text type="h2" color="--neutral-color-100">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
-              </Text>
-              <Text type="bl" color="--neutral-color-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                justo, eget fringilla lorem facilisis eu.
-              </Text>
-            </Flexbox>
+    <div className={stylex(styles.main)}>
+      <div className={stylex(styles.viewport, styles.header)}>
+        <a href="/">
+          <div className={stylex(styles.logo)}>
+            <IconLogo width={36} />
+            <div className={stylex(styles.logoText)}>serpa cloud</div>
+          </div>
+        </a>
+        <div className={stylex(styles.links)}>
+          <a href="/session/signin" className={stylex(styles.singleLink)}>
+            Sign in
+          </a>
 
-            <div>
-              <div className={stylex(styles.heroImageContainer)}>
-                <img
-                  src={calabi}
-                  alt="Decentralized Cloud Computing"
-                  className={stylex(styles.heroImage)}
-                />
-              </div>
-            </div>
-          </Grid>
+          <a href="/session/signup" className={stylex(styles.button)}>
+            Get Started
+          </a>
         </div>
-      </Padding>
-    </Margin>
+      </div>
+    </div>
   );
 }
+
+export default (memo<{}>(Header): React$AbstractComponent<{}, mixed>);

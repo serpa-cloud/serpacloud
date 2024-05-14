@@ -1,29 +1,18 @@
 // @flow
 import { memo } from 'react';
-import stylex from '@serpa-cloud/stylex';
+import { Routes, Route } from 'react-router-dom';
 
-import Grid from '../LandingPage/Grid';
-import Header from './Header';
-import Content from './Content';
-
-const styles = stylex.create({
-  main: {
-    backgroundImage: `var(--surface-background), var(--neutral-gradient)`,
-  },
-  body: {
-    width: '100%',
-  },
-});
+import VideosList from './VideosList';
+import VideoLanding from './VideoLanding';
 
 function Tutorials(): React$Node {
   return (
-    <main className={`LIGHT ${stylex(styles.main)}`}>
-      <div className={stylex(styles.body)}>
-        <Grid />
-        <Header />
-        <Content />
-      </div>
-    </main>
+    <div>
+      <Routes>
+        <Route path="/:videoName" element={<VideoLanding />} />
+        <Route path="/" element={<VideosList />} />
+      </Routes>
+    </div>
   );
 }
 

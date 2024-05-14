@@ -27,7 +27,7 @@ function App({ locale }: Props): React$Node {
       <Analytics>
         <Routes>
           <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/tutorials" element={<Tutorials />} />
+          <Route path="/tutorials/*" element={<Tutorials />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
       </Analytics>
