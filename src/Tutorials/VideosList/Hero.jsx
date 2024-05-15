@@ -47,7 +47,12 @@ export default function Header() {
   const { width } = useDevice();
   return (
     <Margin bottom={32}>
-      <Padding vertical={32} className={stylex(styles.header)} left={24}>
+      <Padding
+        top={width <= 860 ? 104 : 56}
+        bottom={32}
+        className={stylex(styles.header)}
+        left={24}
+      >
         <div className={stylex(styles.container)}>
           <Grid columns={width <= 860 ? '1fr' : '1fr 1fr'}>
             <Flexbox justifyContent="center" flexDirection="column" rowGap={16}>

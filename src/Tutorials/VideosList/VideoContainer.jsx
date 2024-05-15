@@ -7,6 +7,8 @@ import { Flexbox, Text } from '../../shared';
 
 import videosObject from '../videosObject';
 
+import useDevice from '../../hooks/useDevice';
+
 type Props = {
   video: string,
 };
@@ -39,6 +41,7 @@ const styles = stylex.create({
 });
 
 export default function VideoContainer({ video }: Props): React$Node {
+  const { width } = useDevice();
   return (
     <Link to={`/tutorials/${video}`}>
       <Flexbox flexDirection="column" rowGap={16} className={stylex(styles.videoContainer)}>
@@ -51,7 +54,7 @@ export default function VideoContainer({ video }: Props): React$Node {
             />
           ) : null}
         </div>
-        <Text type="bl" color="--neutral-color-100">
+        <Text type={width <= 860 ? 's3m' : 'bl'} color="--neutral-color-100">
           {videosObject[video]?.title}
         </Text>
         <Text type="bs" color="--neutral-color-100">

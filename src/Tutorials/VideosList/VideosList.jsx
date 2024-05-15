@@ -5,6 +5,8 @@ import { memo } from 'react';
 import { Grid, Padding } from '../../shared';
 
 import VideoContainer from './VideoContainer';
+import Footer from '../../LandingPage/sections/Footer';
+import noiseUrl from '../../LandingPage/assets/noise.png';
 
 import useDevice from '../../hooks/useDevice';
 
@@ -24,7 +26,6 @@ const styles = stylex.create({
     width: '100%',
     position: 'relative',
     maxWidth: '100%',
-    paddingBottom: 40,
   },
   container: {
     width: '100%',
@@ -60,6 +61,14 @@ function VideosList(): React$Node {
               })}
             </Grid>
           </Padding>
+        </div>
+        <div
+          className={stylex(styles.footerContainer)}
+          style={{
+            backgroundImage: `url("${noiseUrl}"), var(--neutral-gradient)`,
+          }}
+        >
+          <Footer />
         </div>
       </div>
     </div>

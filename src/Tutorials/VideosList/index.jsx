@@ -5,7 +5,6 @@ import stylex from '@serpa-cloud/stylex';
 import Grid from '../../LandingPage/Grid';
 import Hero from './Hero';
 import VideosList from './VideosList';
-import Header from '../Header';
 
 const styles = stylex.create({
   main: {
@@ -21,7 +20,6 @@ function Tutorials(): React$Node {
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
         <Grid />
-        <Header />
         <Hero />
         <VideosList />
       </div>

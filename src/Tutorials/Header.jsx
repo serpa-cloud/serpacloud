@@ -1,6 +1,6 @@
 // @flow
 import stylex from '@serpa-cloud/stylex';
-import { memo } from 'react';
+import { memo, useEffect, useCallback, useState } from 'react';
 
 import { ReactComponent as IconLogo } from '../shared/images/icon.svg';
 
@@ -35,6 +35,15 @@ const styles = stylex.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     maxWidth: '100vw',
+    transform: 'translateY(0%)',
+  },
+  show: {
+    transform: 'translateY(0%)',
+    transition: 'transform 250ms cubic-bezier(0.14, 1, 0.34, 1)',
+  },
+  hide: {
+    transform: 'translateY(-100%)',
+    transition: 'transform 350ms cubic-bezier(0.45, 0.1, 0.2, 1)',
   },
   logo: {
     columnGap: 16,
@@ -93,9 +102,34 @@ const styles = stylex.create({
 });
 
 function Header(): React$Node {
+  const [scrollDirection, SetScrollDirection] = useState('UP');
+
+  const getScroll = useCallback(() => {
+    // Initial state
+    let scrollPos = 0;
+    // adding scroll event
+    window.addEventListener('scroll', () => {
+      // detects new state and compares it with the new one
+      if (document.body.getBoundingClientRect().top > scrollPos) SetScrollDirection('UP');
+      else SetScrollDirection('DOWN');
+      // saves the new position for iteration.
+      scrollPos = document.body.getBoundingClientRect().top;
+    });
+  }, []);
+
+  useEffect(() => {
+    getScroll();
+  }, [getScroll]);
+
   return (
     <div className={stylex(styles.main)}>
-      <div className={stylex(styles.viewport, styles.header)}>
+      <div
+        className={stylex(
+          styles.viewport,
+          styles.header,
+          scrollDirection === 'UP' ? styles.show : styles.hide,
+        )}
+      >
         <a href="/">
           <div className={stylex(styles.logo)}>
             <IconLogo width={36} />
