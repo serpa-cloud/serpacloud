@@ -32,16 +32,6 @@ const styles = stylex.create({
     maxWidth: 1110,
     margin: 'auto',
   },
-  thumbContainer: {
-    height: 180,
-    backgroundColor: '#ccc',
-  },
-  videoContainer: {
-    cursor: 'pointer',
-    ':hover': {
-      opacity: 0.7,
-    },
-  },
 });
 
 function VideosList(): React$Node {

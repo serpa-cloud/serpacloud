@@ -1,5 +1,5 @@
 // @flow
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 
 import stylex from '@serpa-cloud/stylex';
 
@@ -21,6 +21,9 @@ const styles = stylex.create({
 });
 
 function VideoLanding(): React$Node {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
