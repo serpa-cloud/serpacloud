@@ -2,7 +2,7 @@
 import stylex from '@serpa-cloud/stylex';
 import { memo } from 'react';
 
-import { Grid, Padding } from '../../shared';
+import { Grid, Padding, Text } from '../../shared';
 
 import VideoContainer from './VideoContainer';
 import Footer from '../../LandingPage/sections/Footer';
@@ -41,6 +41,11 @@ function VideosList(): React$Node {
       <div className={stylex(styles.viewport)}>
         <div className={stylex(styles.container)}>
           <Padding horizontal={16}>
+            <Padding bottom={32}>
+              <Text color="--neutral-color-100" type="h2">
+                Video tutorials
+              </Text>
+            </Padding>
             <Grid
               columns={(width <= 768 && '1fr') || (width <= 932 && '1fr 1fr') || '1fr 1fr 1fr'}
               rowGap={24}
