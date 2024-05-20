@@ -57,11 +57,11 @@ export default function Header() {
           <Grid columns={width <= 860 ? '1fr' : '1fr 1fr'}>
             <Flexbox justifyContent="center" flexDirection="column" rowGap={16}>
               <Text type={width <= 860 ? 'h3' : 'h2'} color="--neutral-color-100">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                Serpa Cloud’s Demos and Use Cases
               </Text>
               <Text type={width <= 860 ? 'bd' : 'bl'} color="--neutral-color-500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt felis
-                justo, eget fringilla lorem facilisis eu.
+                Watch videos to learn how to build and deploy applications on our managed Kubernetes
+                infrastructure in just minutes.
               </Text>
             </Flexbox>
 

@@ -43,7 +43,7 @@ function VideosList(): React$Node {
           <Padding horizontal={16}>
             <Padding bottom={32}>
               <Text color="--neutral-color-100" type="h2">
-                Video tutorials
+                Watch our Tutorials
               </Text>
             </Padding>
             <Grid
