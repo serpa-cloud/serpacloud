@@ -7,7 +7,11 @@ import { hydrateRoot, createRoot } from 'react-dom/client';
 
 import App from './App';
 
+import ResizerProvider from './context/ResizerProvider';
+
 import './shared/styles.css';
+
+const isEnglish = window.location.hostname.includes('en.');
 
 amplitude.init('ea0aacbcd0fbf681046bd74f091e4b28', {
   defaultTracking: {
@@ -38,7 +42,9 @@ if (window.relayRecords)
     document.getElementById('root'),
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <ResizerProvider>
+          <App locale={isEnglish ? 'en' : 'es'} />
+        </ResizerProvider>
       </BrowserRouter>
     </React.StrictMode>,
   );
@@ -46,7 +52,9 @@ else
   createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <BrowserRouter>
-        <App />
+        <ResizerProvider>
+          <App locale={isEnglish ? 'en' : 'es'} />
+        </ResizerProvider>
       </BrowserRouter>
     </React.StrictMode>,
   );

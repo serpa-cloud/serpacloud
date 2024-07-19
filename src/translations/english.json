@@ -1,0 +1,16 @@
+{
+  "input.requiredError": "This field is required",
+
+  "contact.title": "Learn how we can simplify your cloud operations in less than 2 weeks",
+  "contact.dot1": "Talk to a Zeet engineer",
+  "contact.dot2": "Discuss your project‘s architecture",
+  "contact.dot3": "Build a migration plan to help you validate fit before you buy",
+  "contactForm.title": "Let‘s chat about your project",
+  "contactForm.firstName": "First Name *",
+  "contactForm.lastName": "Last Name *",
+  "contactForm.workName": "Work Email *",
+  "contactForm.phone": "Phone *",
+  "contactForm.help": "How can we help?",
+  "contactForm.hearAbout": "How did you hear about Zeet?",
+  "contactForm.submit": "SUBMIT"
+}
