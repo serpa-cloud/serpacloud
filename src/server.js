@@ -297,6 +297,18 @@ app.use('/app', async (_, res) => {
   return res.status(302).redirect('https://app.serpa.cloud');
 });
 
+app.get('/tutorials/:video', async (req, res) => {
+  return renderReactApp(req, res);
+});
+
+app.get('/tutorials', async (req, res) => {
+  return renderReactApp(req, res);
+});
+
+app.get('/contact', async (req, res) => {
+  return renderReactApp(req, res);
+});
+
 app.get('/', async (req, res) => {
   return renderReactApp(req, res);
 });
