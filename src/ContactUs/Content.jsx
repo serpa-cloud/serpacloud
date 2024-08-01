@@ -9,6 +9,8 @@ import { ReactComponent as IconLogo } from '../shared/images/icon.svg';
 
 import { Flexbox, Padding } from '../shared';
 
+import HeroCard from '../LandingPage/HeroCard';
+
 const styles = stylex.create({
   main: {
     width: '100vw',
@@ -18,27 +20,37 @@ const styles = stylex.create({
     bottom: 0,
     zIndex: 2,
     boxSizing: 'border-box',
+    paddingTop: 40,
+    paddingBottom: 40,
+    '@media (max-width: 920px)': {
+      paddingTop: 0,
+      paddingBottom: 0,
+    },
   },
   viewport: {
     width: '100%',
+    maxWidth: 1200,
     position: 'relative',
-    maxWidth: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
     paddingBottom: 40,
+    borderTop: '2px solid var(--primary-color-1)',
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    columnGap: 32,
+
+    columnGap: 0,
     color: 'var(--neutral-color-100)',
     width: '100%',
-    maxWidth: 1110,
     paddingLeft: 16,
     paddingRight: 16,
-    '@media (max-width: 1000px)': {
+    '@media (min-width: 1200px)': {
+      gridTemplateColumns: '600px 1fr 480px',
+      rowGap: 24,
+    },
+    '@media (min-width: 920px) and (max-width: 1200px)': {
+      gridTemplateColumns: '50% 1fr 45%',
+      rowGap: 24,
+    },
+    '@media (min-width: 540px) and (max-width: 920px)': {
       gridTemplateColumns: '1fr',
       rowGap: 24,
     },
@@ -49,19 +61,14 @@ const styles = stylex.create({
       rowGap: 24,
     },
   },
-  logoContainer: {
-    width: '100%',
-    maxWidth: 1110,
-    boxSizing: 'border-box',
-  },
   logo: {
     columnGap: 16,
     display: 'flex',
     alignItems: 'center',
   },
   logoText: {
-    fontSize: 24,
-    color: 'var(--neutral-color-100)',
+    fontSize: 20,
+    color: 'var(--neutral-color-800)',
     fontWeight: 400,
     letterSpacing: '.4em',
     lineHeight: '0.85',
@@ -73,8 +80,8 @@ const styles = stylex.create({
 function Content(): React$Node {
   return (
     <div className={stylex(styles.main)}>
-      <div className={stylex(styles.viewport)}>
-        <Padding top={40} bottom={56} horizontal={16} className={stylex(styles.logoContainer)}>
+      <HeroCard className={stylex(styles.viewport)}>
+        <Padding top={16} bottom={56} horizontal={16} className={stylex(styles.logoContainer)}>
           <a href="/">
             <div className={stylex(styles.logo)}>
               <IconLogo width={36} />
@@ -88,12 +95,13 @@ function Content(): React$Node {
             <div>
               <Copy />
             </div>
+            <div />
             <div>
               <From />
             </div>
           </div>
         </Flexbox>
-      </div>
+      </HeroCard>
     </div>
   );
 }

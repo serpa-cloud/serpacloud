@@ -62,7 +62,6 @@ const styles = stylex.create({
     position: 'relative',
     backgroundColor: 'rgba(14, 13, 31, 1)',
     justifyContent: 'center',
-    marginTop: -164,
     boxShadow: 'var(--shadow-1)',
   },
   mapSticky: {
@@ -249,13 +248,6 @@ function NetworkMap(): React$Node {
   const viewRef = useRef();
   const scheduledAnimationFrame = useRef<boolean>(false);
 
-  const [contentStyles, animateContent] = useSpring(
-    () => ({
-      opacity: 0,
-    }),
-    [],
-  );
-
   const [centeredStyles, animateCentered] = useSpring(
     () => ({
       maxWidth: '1344px',
@@ -274,14 +266,6 @@ function NetworkMap(): React$Node {
           zoom: (top * 1.0) / window.innerHeight + 14.1,
           pitch: (top * 30.0) / window.innerHeight + 30,
         }));
-      }
-
-      const contentTopReference = top - window.innerHeight * 0.4;
-
-      if (contentTopReference <= 80 && contentTopReference >= window.innerHeight * -0.55) {
-        animateContent.start({
-          opacity: (-1.6 / window.innerHeight) * contentTopReference + 0.3,
-        });
       }
 
       const centeredTopReference = top - window.innerHeight * 0.1;
@@ -313,7 +297,7 @@ function NetworkMap(): React$Node {
     return () => {
       window?.removeEventListener('scroll', onScroll);
     };
-  }, [animateCentered, animateContent]);
+  }, [animateCentered]);
 
   const [layers, setLayers] = useState([]);
 
@@ -354,7 +338,7 @@ function NetworkMap(): React$Node {
           </div>
         </div>
 
-        <animated.div style={contentStyles} className={stylex(styles.contentContainer)}>
+        <div className={stylex(styles.contentContainer)}>
           <animated.div
             className={stylex(styles.centered, styles.mainContent)}
             style={centeredStyles}
@@ -434,7 +418,7 @@ function NetworkMap(): React$Node {
 
             <OS />
           </animated.div>
-        </animated.div>
+        </div>
 
         <div
           className={stylex(styles.overlay)}

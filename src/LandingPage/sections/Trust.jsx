@@ -16,10 +16,7 @@ const styles = stylex.create({
     marginRight: 'auto',
   },
   trustSection: {
-    marginTop: 40,
-    '@media (max-width: 660px)': {
-      marginTop: 24,
-    },
+    marginTop: 24,
   },
   trustedTitle: {
     color: 'var(--neutral-color-800)',
@@ -47,7 +44,6 @@ const styles = stylex.create({
   },
   mainContent: {
     paddingTop: 40,
-    paddingBottom: 40,
   },
   logoGrid: {
     display: 'grid',

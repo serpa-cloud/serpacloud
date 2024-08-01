@@ -14,7 +14,7 @@ const styles = stylex.create({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundImage: `var(--surface-background), var(--neutral-gradient)`,
+    background: '#080038',
   },
   inner: {
     position: 'absolute',
@@ -196,7 +196,7 @@ function Grid(): React$Node {
     [],
   );
 
-  if (!wSquares) return <div />;
+  if (!wSquares) return <div className={stylex(styles.main)} />;
 
   return (
     <div className={stylex(styles.main)}>

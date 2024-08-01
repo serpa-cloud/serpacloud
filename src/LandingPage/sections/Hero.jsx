@@ -1,7 +1,7 @@
 // @flow
+import { memo } from 'react';
+import { useIntl } from 'react-intl';
 import stylex from '@serpa-cloud/stylex';
-import { useRef, useState, memo } from 'react';
-import { useTransition, animated } from 'react-spring';
 
 const styles = stylex.create({
   centered: {
@@ -16,12 +16,12 @@ const styles = stylex.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 0,
-    paddingBottom: 40,
+    paddingBottom: 56,
     maxWidth: 1120,
     marginLeft: 'auto',
     marginRight: 'auto',
     '@media (max-width: 660px)': {
-      paddingBottom: 0,
+      paddingBottom: 40,
     },
   },
 
@@ -43,25 +43,36 @@ const styles = stylex.create({
     justifyContent: 'center',
     fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
     fontSize: 20,
-    fontWeight: 400,
+    fontWeight: 500,
     boxSizing: 'border-box',
+    boxShadow: 'var(--shadow-1)',
     background: 'linear-gradient(45deg,var(--pink-solid-color) 0,var(--orange-solid-color) 100%)',
     '@media (max-width: 680px)': {
       width: '100%',
     },
+    '@media (max-width: 680px) and (min-width: 540px)': {
+      fontSize: 18,
+    },
     '@media (max-width: 540px)': {
       height: 48,
+      fontSize: 16,
+    },
+    '@media (max-width: 400px)': {
+      paddingLeft: 24,
+      paddingRight: 24,
     },
   },
 
   heroDescription: {
     letterSpacing: '.007em',
-    fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
-    fontSize: 28,
-    fontWeight: 300,
+    fontFamily: 'SF Pro Text,Helvetica Neue,Helvetica,Arial,sans-serif',
+    fontSize: 24,
+    lineHeight: 1.4,
+    fontWeight: 400,
     color: 'var(--neutral-color-600)',
-    marginBottom: 0,
-    marginTop: 16,
+    marginBottom: 16,
+    marginTop: 20,
+    maxWidth: 800,
     '@media (max-width: 1200px)': {
       marginTop: 8,
       fontSize: 26,
@@ -70,7 +81,7 @@ const styles = stylex.create({
       fontSize: 24,
     },
     '@media (max-width: 600px)': {
-      fontSize: 20,
+      fontSize: 18,
     },
   },
 
@@ -81,17 +92,18 @@ const styles = stylex.create({
     letterSpacing: '.4em',
     lineHeight: '0.85',
     fontVariant: 'small-caps',
-    marginTop: 0,
-    marginBottom: 16,
+    marginTop: 24,
+    marginBottom: 8,
     fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
     '@media (max-width: 1200px)': {
       marginBottom: 8,
     },
-    '@media (max-width: 600px)': {
-      fontSize: 24,
-    },
-    '@media (max-width: 480px)': {
+    '@media (max-width: 680px)': {
       fontSize: 20,
+    },
+    '@media (max-width: 502px)': {
+      fontSize: 16,
+      letterSpacing: '.2em',
     },
   },
   titleGradient: {
@@ -100,67 +112,35 @@ const styles = stylex.create({
 
   mainTitle: {
     color: 'var(--neutral-color-800)',
-    textAlign: 'left',
     fontFamily: 'SF Pro Display,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif',
     margin: 0,
-    fontSize: 80,
     fontWeight: 600,
     letterSpacing: '0.005em',
     lineHeight: '1',
-    '@media (max-width: 1200px)': {
-      fontSize: 72,
-      lineHeight: '1.05',
-    },
-    '@media (max-width: 860px)': {
+    '@media (min-width: 680px)': {
       fontSize: 56,
     },
-    '@media (max-width: 680px)': {
+    '@media (max-width: 680px) and (min-width: 600px)': {
       fontSize: 48,
     },
-    '@media (max-width: 600px)': {
+    '@media (max-width: 600px) and (min-width: 540px)': {
       fontSize: 40,
     },
-    '@media (max-width: 540px)': {
+    '@media (max-width: 540px) and (min-width: 440px)': {
       fontSize: 36,
+      lineHeight: '1.1',
     },
-    '@media (max-width: 440px)': {
+    '@media (max-width: 440px) and (min-width: 420px)': {
       fontSize: 36,
+      lineHeight: '1.2',
     },
-    '@media (max-width: 420px)': {
+    '@media (max-width: 420px) and (min-width: 380px)': {
       fontSize: 32,
+      lineHeight: '1.2',
     },
     '@media (max-width: 380px)': {
-      fontSize: 26,
-    },
-  },
-  flashingParent: {
-    position: 'relative',
-  },
-  flashingItem: {
-    position: 'absolute',
-    whiteSpace: 'nowrap',
-  },
-  ghostWord: {
-    width: 356,
-    height: 1,
-    display: 'inline-block',
-    '@media (max-width: 1200px)': {
-      width: 320,
-    },
-    '@media (max-width: 860px)': {
-      width: 250,
-    },
-    '@media (max-width: 680px)': {
-      width: 210,
-    },
-    '@media (max-width: 600px)': {
-      width: 180,
-    },
-    '@media (max-width: 540px)': {
-      width: 160,
-    },
-    '@media (max-width: 440px)': {
-      width: 120,
+      fontSize: 24,
+      lineHeight: '1.2',
     },
   },
   flashGradient: {
@@ -184,33 +164,19 @@ const styles = stylex.create({
     paddingRight: 40,
     position: 'relative',
     zIndex: 1,
-    '@media (max-width: 860px)': {
-      paddingLeft: 24,
-      paddingRight: 24,
+    '@media (max-width: 860px) and (min-width: 400px)': {
+      paddingLeft: 20,
+      paddingRight: 20,
+    },
+    '@media (max-width: 400px)': {
+      paddingLeft: 16,
+      paddingRight: 16,
     },
   },
 });
 
-const words = ['the future', 'scalable', 'secure', 'fast'];
-
 function Hero(): React$Node {
-  const refTimer = useRef();
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const transitions = useTransition([words[currentIndex]], {
-    from: { opacity: 0, y: -100 },
-    enter: { opacity: 1, y: 0 },
-    leave: { opacity: 0, y: 50 },
-    onRest() {
-      clearTimeout(refTimer.current);
-      refTimer.current = setTimeout(() => {
-        setCurrentIndex((wordIndex) => {
-          return (wordIndex + 1) % words.length;
-        });
-      }, 1500);
-    },
-  });
+  const intl = useIntl();
 
   return (
     <section className={stylex(styles.heroSection)} id="hero">
@@ -218,34 +184,32 @@ function Hero(): React$Node {
         <div className={stylex(styles.heroTitle)}>
           <div className={stylex(styles.heroContent)}>
             <h1 className={stylex(styles.title)}>
-              <span className={stylex(styles.titleGradient)}>serpa cloud</span>
+              <span className={stylex(styles.titleGradient)}>
+                {intl.formatMessage({ id: 'landing.hero.title' })}
+              </span>
             </h1>
             <h2 className={stylex(styles.mainTitle)}>
-              <div>(de)centralized cloud</div>
+              <div>{intl.formatMessage({ id: 'landing.hero.headline' })}</div>
               <div className={stylex(styles.flashParagraph)}>
-                <span>{`computing is `}</span>
-                <span className={stylex(styles.flashingParent)}>
-                  {transitions((style, item) => (
-                    <animated.span
-                      style={style}
-                      className={stylex(styles.flashingItem, styles.flashGradient)}
-                    >
-                      {item}
-                    </animated.span>
-                  ))}
-                  <span className={stylex(styles.ghostWord)}>{` `}</span>
-                </span>
+                {intl.formatMessage(
+                  {
+                    id: 'landing.hero.subheadline',
+                  },
+                  {
+                    s: (str) => <span className={stylex(styles.flashGradient)}>{str}</span>,
+                  },
+                )}
               </div>
             </h2>
             <p className={stylex(styles.heroDescription)}>
-              Deploy, Scale and Deliver Applications faster than ever.
+              {intl.formatMessage({ id: 'landing.hero.description' })}
             </p>
             <div className={stylex(styles.toolbar)}>
               <a
                 href="https://app.serpa.cloud/session/signup"
                 className={stylex(styles.mainButton)}
               >
-                start here
+                {intl.formatMessage({ id: 'landing.hero.callToAction' })}
               </a>
             </div>
           </div>

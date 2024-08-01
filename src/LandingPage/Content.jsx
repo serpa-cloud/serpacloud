@@ -3,54 +3,45 @@ import stylex from '@serpa-cloud/stylex';
 import { useRef, useEffect, memo } from 'react';
 import { useSpring, animated } from 'react-spring';
 
+import Header from './Header';
 import HeroCard from './HeroCard';
 
 import Hero from './sections/Hero';
-import Trust from './sections/Trust';
 
 import calabi from './assets/calabi.png';
-import NetworkMap from './sections/NetworkMap';
 import Languages from './sections/Languages';
 import Quotes from './sections/Quotes';
 import Footer from './sections/Footer';
+import KubernetesMap from './sections/KubernetesMap';
+import Enterprise from './sections/Enterprise';
 
 const styles = stylex.create({
   main: {
     width: '100vw',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 2,
+    marginLeft: 'auto',
+    marginRight: 'auto',
     boxSizing: 'border-box',
-    paddingTop: 160,
-    '@media (max-width: 860px)': {
-      paddingTop: 40,
-    },
-    '@media (max-width: 580px)': {
-      paddingTop: 0,
-    },
+    paddingTop: 56,
+    maxWidth: 1200,
   },
 
   heroImageContainer: {
     width: '100%',
     maxWidth: 480,
-    paddingTop: 40,
-    paddingBottom: 16,
+    paddingTop: 24,
+    paddingBottom: 0,
     marginLeft: 'auto',
     marginRight: 'auto',
     borderTopLeftRadius: 8,
     borderTopRightRadius: 8,
-    marginTop: -120,
+
     aspectRatio: '1.09',
     '@media (max-width: 860px)': {
       maxWidth: 360,
-      marginTop: -56,
       paddingTop: 24,
     },
     '@media (max-width: 580px)': {
       maxWidth: 200,
-      marginTop: 0,
     },
   },
   heroImage: {
@@ -60,22 +51,19 @@ const styles = stylex.create({
     zIndex: 2,
     position: 'relative',
   },
+  section: {
+    marginTop: 80,
+    '@media (max-width: 440px)': {
+      marginTop: 0,
+    },
+  },
 });
 
 function Content(): React$Node {
-  const trustedRef = useRef();
-
   const [calabiStyles, animateCalabi] = useSpring(
     () => ({
       y: 0,
       opacity: 1,
-    }),
-    [],
-  );
-
-  const [trustedStyles, animatedTrusted] = useSpring(
-    () => ({
-      y: 0,
     }),
     [],
   );
@@ -94,15 +82,6 @@ function Content(): React$Node {
         });
       }
 
-      const trustedTop = trustedRef?.current?.getBoundingClientRect()?.top ?? 0;
-
-      if (trustedTop <= 0 && trustedTop >= -370) {
-        animatedTrusted.start({
-          immediate: true,
-          y: (82 * trustedTop) / 230,
-        });
-      }
-
       scheduledAnimationFrame.current = false;
     }
 
@@ -117,11 +96,13 @@ function Content(): React$Node {
     return () => {
       window?.removeEventListener('scroll', onScroll);
     };
-  }, [animateCalabi, animatedTrusted]);
+  }, [animateCalabi]);
 
   return (
     <div>
       <div className={stylex(styles.main)} id="landingScrollElement">
+        <Header />
+
         <HeroCard>
           <div className={stylex(styles.heroImageContainer)}>
             <animated.img
@@ -133,23 +114,32 @@ function Content(): React$Node {
           </div>
 
           <Hero />
-
-          <animated.div
-            className={stylex(styles.trustedContainer)}
-            style={trustedStyles}
-            ref={trustedRef}
-          >
-            <Trust />
-          </animated.div>
-
-          <NetworkMap />
-
-          <Languages />
-
-          <Quotes />
-
-          <Footer />
         </HeroCard>
+
+        <div className={stylex(styles.section)}>
+          <HeroCard>
+            <Languages />
+          </HeroCard>
+        </div>
+
+        <div className={stylex(styles.section)}>
+          <HeroCard>
+            <KubernetesMap />
+          </HeroCard>
+        </div>
+
+        <div className={stylex(styles.section)}>
+          <HeroCard>
+            <Enterprise />
+          </HeroCard>
+        </div>
+
+        <div className={stylex(styles.section)}>
+          <HeroCard>
+            <Quotes />
+            <Footer />
+          </HeroCard>
+        </div>
       </div>
     </div>
   );
