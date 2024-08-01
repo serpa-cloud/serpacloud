@@ -3,7 +3,7 @@ import { memo } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
 import Grid from '../../LandingPage/Grid';
-import Hero from './Hero';
+import Hero from './VideoListHero';
 import VideosList from './VideosList';
 
 const styles = stylex.create({
@@ -13,6 +13,10 @@ const styles = stylex.create({
   body: {
     width: '100%',
   },
+  content: {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    backdropFilter: 'saturate(120%) blur(20px)',
+  },
 });
 
 function Tutorials(): React$Node {
@@ -20,8 +24,10 @@ function Tutorials(): React$Node {
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
         <Grid />
-        <Hero />
-        <VideosList />
+        <div className={stylex(styles.content)}>
+          <Hero />
+          <VideosList />
+        </div>
       </div>
     </main>
   );

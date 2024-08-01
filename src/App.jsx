@@ -26,7 +26,7 @@ function App({ locale }: Props): React$Node {
     <IntlProvider messages={translations} locale={locale}>
       <Analytics>
         <Routes>
-          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/tutorials/*" element={<Tutorials />} />
           <Route path="/" element={<LandingPage />} />
         </Routes>
@@ -35,4 +35,4 @@ function App({ locale }: Props): React$Node {
   );
 }
 
-export default (memo<{}>(App): React$AbstractComponent<{}, mixed>);
+export default (memo<Props>(App): React$AbstractComponent<Props, mixed>);

@@ -4,7 +4,7 @@ import { memo, useEffect } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
 import Grid from '../../LandingPage/Grid';
-import Container from './Container';
+import VideoDetail from './VideoDetail';
 
 const styles = stylex.create({
   main: {
@@ -24,11 +24,12 @@ function VideoLanding(): React$Node {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
         <Grid />
-        <Container />
+        <VideoDetail />
       </div>
     </main>
   );

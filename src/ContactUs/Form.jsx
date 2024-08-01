@@ -1,25 +1,27 @@
 // @flow
-import stylex from '@serpa-cloud/stylex';
+import { useCallback } from 'react';
 import { useIntl } from 'react-intl';
+import stylex from '@serpa-cloud/stylex';
 
-import { Text, Flexbox, Padding, useInput, Input, Button } from '../shared';
-
-import noiseUrl from '../LandingPage/assets/noise.png';
+import { Text, Flexbox, Padding, useInput, Input, Button, validateData } from '../shared';
 
 const styles = stylex.create({
   appInput: {
     flex: 1,
   },
+  card: {
+    background: 'white',
+    boxShadow: 'var(--shadow-1)',
+    borderTop: '4px solid var(--primary-color-1)',
+  },
 });
 
-export default function Form() {
+export default function Form(): React$Node {
   const intl = useIntl();
 
-  const firstName = useInput({
-    name: 'firstName',
+  const name = useInput({
+    name: 'name',
     required: true,
-    // eslint-disable-next-line no-useless-escape
-    regexpOverwrite: /^[a-z0-9\-]*/,
     label: intl.formatMessage({ id: 'contactForm.firstName' }),
     value: '',
     errors: {
@@ -30,8 +32,6 @@ export default function Form() {
   const lastName = useInput({
     name: 'lastName',
     required: true,
-    // eslint-disable-next-line no-useless-escape
-    regexpOverwrite: /^[a-z0-9\-]*/,
     label: intl.formatMessage({ id: 'contactForm.lastName' }),
     value: '',
     errors: {
@@ -39,19 +39,23 @@ export default function Form() {
     },
   });
 
-  const workName = useInput({
-    name: 'workName',
+  const email = useInput({
+    name: 'email',
+    // eslint-disable-next-line no-useless-escape
+    regexp: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/,
+    validateEvent: 'blur',
     required: true,
     label: intl.formatMessage({ id: 'contactForm.workName' }),
     value: '',
     errors: {
       requiredError: intl.formatMessage({ id: 'input.requiredError' }),
+      regexpError: intl.formatMessage({ id: 'input.useValidEmail' }),
+      defaultError: 'Please insert a valid email',
     },
   });
 
   const phone = useInput({
     name: 'phone',
-    type: 'number',
     required: true,
     label: intl.formatMessage({ id: 'contactForm.phone' }),
     value: '',
@@ -60,9 +64,8 @@ export default function Form() {
     },
   });
 
-  const help = useInput({
-    name: 'help',
-    type: 'textarea',
+  const helpDescription = useInput({
+    name: 'helpDescription',
     label: intl.formatMessage({ id: 'contactForm.help' }),
     value: '',
     errors: {
@@ -70,36 +73,62 @@ export default function Form() {
     },
   });
 
-  const hearAbout = useInput({
-    name: 'hearAbout',
+  const refererDescription = useInput({
+    name: 'refererDescription',
     label: intl.formatMessage({ id: 'contactForm.hearAbout' }),
     value: '',
     errors: {
       requiredError: intl.formatMessage({ id: 'input.requiredError' }),
     },
   });
+
+  const handleOnSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+
+      const { errors, data } = validateData([
+        name,
+        lastName,
+        email,
+        phone,
+        helpDescription,
+        refererDescription,
+      ]);
+
+      if (!errors) {
+        fetch('/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        }).then(() => {
+          // eslint-disable-next-line no-alert
+          alert('Form sent with success');
+        });
+      }
+    },
+    [email, helpDescription, lastName, name, phone, refererDescription],
+  );
+
   return (
-    <div
-      style={{
-        backgroundImage: `url("${noiseUrl}"), var(--neutral-gradient)`,
-      }}
-    >
-      <Padding horizontal={32} vertical={32}>
+    <div className={stylex(styles.card)}>
+      <Padding horizontal={16} vertical={24}>
         <Flexbox flexDirection="column" rowGap={24}>
-          <Text type="h4" color="--neutral-color-800" id="contactForm.title" />
-          <form>
+          <Text type="h5" color="--neutral-color-800" id="contactForm.title" />
+          <form onSubmit={handleOnSubmit} autoComplete="nope">
+            <input type="submit" style={{ display: 'none' }} />
             <Flexbox flexDirection="column" rowGap={24}>
-              <Flexbox columnGap={16}>
-                <div className={stylex(styles.appInput)}>
-                  <Input input={firstName.input} />
-                </div>
-                <div className={stylex(styles.appInput)}>
-                  <Input input={lastName.input} />
-                </div>
-              </Flexbox>
+              <div className={stylex(styles.appInput)}>
+                <Input input={name.input} />
+              </div>
 
               <div className={stylex(styles.appInput)}>
-                <Input input={workName.input} />
+                <Input input={lastName.input} />
+              </div>
+
+              <div className={stylex(styles.appInput)}>
+                <Input input={email.input} />
               </div>
 
               <div className={stylex(styles.appInput)}>
@@ -107,14 +136,14 @@ export default function Form() {
               </div>
 
               <div className={stylex(styles.appInput)}>
-                <Input input={help.input} />
+                <Input input={helpDescription.input} />
               </div>
 
               <div className={stylex(styles.appInput)}>
-                <Input input={hearAbout.input} />
+                <Input input={refererDescription.input} />
               </div>
 
-              <Button intlId="contactForm.submit" onClick={() => {}} />
+              <Button intlId="contactForm.submit" onClick={handleOnSubmit} />
             </Flexbox>
           </form>
         </Flexbox>

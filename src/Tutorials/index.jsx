@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import VideosList from './VideosList';
 import VideoLanding from './VideoLanding';
-import Header from './Header';
+import Header from '../LandingPage/Header';
 
 function Tutorials(): React$Node {
   return (

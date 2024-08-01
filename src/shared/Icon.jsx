@@ -59,6 +59,7 @@ type Props = {|
   color?: string,
   hoverColor?: string,
   +gradient?: ?string,
+  +parentClassName?: ?any,
 |};
 
 const styles = stylex.create({
@@ -92,6 +93,7 @@ function Icon({
   color = '--primary-color-1',
   hoverColor,
   gradient,
+  parentClassName,
 }: Props): React$Node {
   const [hover, setHover] = useState(false);
   const style = {
@@ -108,7 +110,7 @@ function Icon({
       style={{ width: size, height: size }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className={stylex(styles.parent)}
+      className={stylex(styles.parent, parentClassName)}
     >
       <i
         className={`material-symbols-outlined ${className} ${stylex(
@@ -133,6 +135,7 @@ Icon.defaultProps = {
   gradient: null,
   color: '--primary-color-1',
   hoverColor: '',
+  parentClassName: null,
 };
 
 export default (memo<Props>(Icon): React$AbstractComponent<Props, mixed>);

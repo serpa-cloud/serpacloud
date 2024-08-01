@@ -15,7 +15,7 @@
       "id": "background",
       "type": "background",
       "layout": { "visibility": "visible" },
-      "paint": { "background-color": "#302F63", "background-opacity": 1 }
+      "paint": { "background-color": "#0c057e", "background-opacity": 1 }
     },
     {
       "id": "landcover",
@@ -31,11 +31,11 @@
       "paint": {
         "fill-color": {
           "stops": [
-            [8, "#302F63"],
-            [9, "#302F63"],
-            [11, "#302F63"],
-            [13, "#302F63"],
-            [15, "#302F63"]
+            [8, "#0c057e"],
+            [9, "#0c057e"],
+            [11, "#0c057e"],
+            [13, "#0c057e"],
+            [15, "#0c057e"]
           ]
         },
         "fill-opacity": 1
@@ -52,11 +52,11 @@
       "paint": {
         "fill-color": {
           "stops": [
-            [8, "#302F63"],
-            [9, "#302F63"],
-            [11, "#302F63"],
-            [13, "#302F63"],
-            [15, "#302F63"]
+            [8, "#0c057e"],
+            [9, "#0c057e"],
+            [11, "#0c057e"],
+            [13, "#0c057e"],
+            [15, "#0c057e"]
           ]
         },
         "fill-opacity": 1,
@@ -74,11 +74,11 @@
       "paint": {
         "fill-color": {
           "stops": [
-            [8, "#302F63"],
-            [9, "#302F63"],
-            [11, "#302F63"],
-            [13, "#302F63"],
-            [15, "#302F63"]
+            [8, "#0c057e"],
+            [9, "#0c057e"],
+            [11, "#0c057e"],
+            [13, "#0c057e"],
+            [15, "#0c057e"]
           ]
         },
         "fill-antialias": true,
@@ -126,11 +126,11 @@
       "paint": {
         "fill-color": {
           "stops": [
-            [8, "#302F63"],
-            [9, "#302F63"],
-            [11, "#302F63"],
-            [13, "#302F63"],
-            [15, "#302F63"]
+            [8, "#0c057e"],
+            [9, "#0c057e"],
+            [11, "#0c057e"],
+            [13, "#0c057e"],
+            [15, "#0c057e"]
           ]
         }
       }
@@ -1705,8 +1705,8 @@
             [16, [-2, -2]]
           ]
         },
-        "fill-outline-color": "#302F63",
-        "fill-color": "rgba(57, 57, 57, 1)",
+        "fill-outline-color": "#0c057e",
+        "fill-color": "#7d42fb",
         "fill-opacity": {
           "base": 1,
           "stops": [

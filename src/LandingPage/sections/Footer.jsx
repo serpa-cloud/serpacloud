@@ -7,8 +7,9 @@ import { ReactComponent as IconLogo } from '../../shared/images/icon.svg';
 
 const styles = stylex.create({
   main: {
-    marginTop: 80,
+    marginTop: 24,
     boxShadow: 'rgba(62, 59, 123, 0.8) 0px 16px 44px',
+    borderTop: '4px solid var(--primary-color-1)',
   },
   linksRoot: {
     paddingTop: 16,

@@ -35,11 +35,20 @@ async function renderReactApp(req, res) {
             <meta charSet="utf-8" />
             <link rel="icon" href="https://static.yellowcode.io/yellowcode/favicon.png" />
             <meta name="viewport" content="width=device-width,initial-scale=1" />
-            <link rel="canonical" href="https://serpa.cloud" />
+
+            {isEnglish ? (
+              <link rel="canonical" href="https://en.serpa.cloud" />
+            ) : (
+              <link rel="alternate" hrefLang="es" href="https://es.serpa.cloud" />
+            )}
 
             <meta
               name="description"
-              content="Deploy, Scale and Deliver Applications faster than ever using (de)centralized cloud computing."
+              content={
+                isEnglish
+                  ? 'Serpa Cloud is the cloud to build, scale, and deliver a faster web. Deploy and scale with no friction, no limits'
+                  : 'Serpa Cloud es la nube para construir, escalar y entregar una web más rápida. Despliega y escala sin fricciones, sin límites'
+              }
             />
 
             <meta
@@ -185,7 +194,7 @@ async function renderReactApp(req, res) {
             <noscript>You need to enable JavaScript to run this app.</noscript>
 
             <div id="root">
-              <App />
+              <App locale={isEnglish ? 'en' : 'es'} />
             </div>
           </body>
         </html>
@@ -233,6 +242,13 @@ async function renderReactApp(req, res) {
 
 const app = express();
 
+function stripCountry(lang) {
+  return lang
+    .trim()
+    .replace('_', '-')
+    .split('-')[0];
+}
+
 app.use((req, res, next) => {
   req.tracingHeaders = {};
   const { headers } = req;
@@ -249,15 +265,26 @@ app.use((req, res, next) => {
   });
 
   const host = req.get('host');
+  const supportedLangCodes = ['es', 'en'];
+  const matchAnyLanguage = supportedLangCodes.some((code) => host.includes(`${code}.`));
+  const acceptedLangs = req.acceptsLanguages();
+  const acceptedLangCodes = acceptedLangs.map(stripCountry);
+  const matchingLangCode = acceptedLangCodes.find((code) => supportedLangCodes.includes(code));
+  const locale = matchingLangCode || 'es';
 
   // eslint-disable-next-line no-underscore-dangle
   const queryURL = req._parsedUrl.query;
 
-  if (host.includes('es.') || host.includes('en.')) {
+  if (req?.path?.includes('/git')) return next();
+  if (!host.includes('serpa.cloud')) return next();
+
+  if (isProduction && !matchAnyLanguage) {
     return res
       .status(302)
       .redirect(
-        `https://${process.env.BASE_DOMAIN}${req?.path ?? ''}${queryURL ? `?${queryURL}` : ''}`,
+        `https://${locale}${process.env.BASE_DOMAIN}${req?.path ?? ''}${
+          queryURL ? `?${queryURL}` : ''
+        }`,
       );
   }
 
