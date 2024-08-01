@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/yellow-code-io/serpacloud/compare/v1.3.0...v1.3.1) (2024-08-01)
+
+
+### Bug Fixes
+
+* add missing routes ([3b33b77](https://github.com/yellow-code-io/serpacloud/commit/3b33b772a59daee1d5dce4b15b59fa53d5001985))
+
 ## [1.3.0](https://github.com/yellow-code-io/serpacloud/compare/v1.2.4...v1.3.0) (2024-08-01)
 
 
