@@ -96,7 +96,7 @@ export default function Form(): React$Node {
       ]);
 
       if (!errors) {
-        fetch('/contact', {
+        fetch('/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
