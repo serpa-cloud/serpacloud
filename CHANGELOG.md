@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/yellow-code-io/serpacloud/compare/v1.2.4...v1.3.0) (2024-08-01)
+
+
+### Features
+
+* add videos ([3bb3a4b](https://github.com/yellow-code-io/serpacloud/commit/3bb3a4b9685ea631770070a46ed0fc9df1c2448d))
+* new sections ([a648b72](https://github.com/yellow-code-io/serpacloud/commit/a648b72c7e7dd3ae1fc5912c185e063731d27c27))
+
 ### [1.2.4](https://github.com/yellow-code-io/serpacloud/compare/v1.2.3...v1.2.4) (2024-05-08)
 
 ### [1.2.3](https://github.com/yellow-code-io/serpacloud/compare/v1.2.2...v1.2.3) (2024-05-08)
