@@ -20,7 +20,7 @@ export default function Header(): React$Node {
           <a href="/">
             <div className="logo">
               <IconLogo width={36} />
-              <div className="logoText">Serpa AI</div>
+              <div className="logoText">serpa ai</div>
             </div>
           </a>
 

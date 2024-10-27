@@ -14,11 +14,11 @@ type Props = {|
 const patterns = [
   {
     path: '/',
-    title: 'title.home',
+    title: 'Build 20x faster with Serpa AI',
   },
   {
     path: '/contact',
-    title: 'title.contact',
+    title: 'Contact Us',
   },
   {
     path: '/tutorials',
@@ -83,15 +83,11 @@ export function getDocumentTitle(pathname: string, locale: string): string {
     translations = spanishTranslations;
   }
 
-  if (matchResult) {
-    const message: string = translations[matchResult.title];
-
-    if (!message) return 'Desarrolla 20x más rápido con Serpa Cloud AI';
-
-    return `${message} | Desarrolla 20x más rápido con Serpa Cloud AI`;
+  if (matchResult?.title) {
+    return `${matchResult.title} | Serpa AI`;
   }
 
-  return 'Desarrolla 20x más rápido con Serpa Cloud AI';
+  return 'Serpa AI';
 }
 
 export default function Analytics({ children }: Props): React$Node {
@@ -101,9 +97,8 @@ export default function Analytics({ children }: Props): React$Node {
   useEffect(() => {
     const matchResult = patterns.find((route) => matchPath(route.path, pathname));
 
-    if (matchResult) {
-      const message = intl.formatMessage({ id: matchResult.title });
-      document.title = `${message} | Desarrolla 20x más rápido con Serpa Cloud AI`;
+    if (matchResult?.title) {
+      document.title = `${matchResult.title} | Serpa AI`;
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'page_view' });
@@ -112,7 +107,7 @@ export default function Analytics({ children }: Props): React$Node {
         '[Amplitude] Page Domain': window.location.hostname,
         '[Amplitude] Page Location': window.location.href,
         '[Amplitude] Page Path': window.location.path,
-        '[Amplitude] Page Title': `${message} | Serpa Cloud`,
+        '[Amplitude] Page Title': `${matchResult.title} | Serpa AI`,
         '[Amplitude] Page URL': window.location.href.split('?')[0],
       });
     }

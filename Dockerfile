@@ -11,6 +11,8 @@ ENV BASE_DOMAIN="serpa.cloud"
 # Copiar package.json y package-lock.json
 COPY package*.json ./
 
+COPY yarn.lock ./
+
 # Instalar dependencias
 RUN yarn -only=prod
 

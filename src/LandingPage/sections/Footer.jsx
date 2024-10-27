@@ -2,7 +2,7 @@
 import { memo } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
-import { ReactComponent as IconLogo } from '../../shared/images/icon.svg';
+import { ReactComponent as IconLogo } from '../../shared/images/icon_codegen.svg';
 
 const styles = stylex.create({
   main: {
@@ -93,7 +93,7 @@ function Footer(): React$Node {
       <div className={stylex(styles.linksRoot)}>
         <div className={stylex(styles.logo)}>
           <IconLogo width={36} />
-          <div className={stylex(styles.logoText)}>serpa cloud</div>
+          <div className={stylex(styles.logoText)}>serpa ai</div>
         </div>
 
         <div className={stylex(styles.linksList)}>
