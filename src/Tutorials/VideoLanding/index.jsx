@@ -3,7 +3,6 @@ import { memo, useEffect } from 'react';
 
 import stylex from '@serpa-cloud/stylex';
 
-import Grid from '../../LandingPage/Grid';
 import VideoDetail from './VideoDetail';
 
 const styles = stylex.create({
@@ -28,7 +27,6 @@ function VideoLanding(): React$Node {
   return (
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
-        <Grid />
         <VideoDetail />
       </div>
     </main>

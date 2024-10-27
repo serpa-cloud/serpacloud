@@ -23,10 +23,26 @@
   box-shadow: 6px 9px 24px 2px rgb(211 156 187 / 17%);
   border-radius: 8px;
   transform: scale(0.8); /* Tamaño inicial reducido */
-  transition: transform 1s ease; /* Transición de 1 segundo */
+  opacity: 0.4; /* Opacidad inicial */
+  transition: transform 1s ease, opacity 1s ease; /* Transición de escala y opacidad */
+
+  @media (min-width: 641px) {
+    animation: growHeroImage 1s ease-in-out forwards;
+  }
 
   @media (max-width: 640px) {
     display: none;
+  }
+}
+
+@keyframes growHeroImage {
+  from {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 

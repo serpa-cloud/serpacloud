@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-redundant-roles */
 // @flow
 import { memo } from 'react';
 import stylex from '@serpa-cloud/stylex';
@@ -8,7 +7,6 @@ import { ReactComponent as IconLogo } from '../../shared/images/icon.svg';
 const styles = stylex.create({
   main: {
     marginTop: 24,
-    boxShadow: 'rgba(62, 59, 123, 0.8) 0px 16px 44px',
     borderTop: '4px solid var(--primary-color-1)',
   },
   linksRoot: {

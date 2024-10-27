@@ -1,0 +1,10 @@
+.canvas {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  height: 400px;
+
+  @media (max-width: 640px) {
+    height: 200px;
+  }
+}

@@ -80,7 +80,6 @@ const styles = stylex.create({
     fontWeight: 300,
     letterSpacing: '.4em',
     lineHeight: '1.25',
-    fontVariant: 'small-caps',
   },
   card: {
     background: 'white',
@@ -91,30 +90,35 @@ const styles = stylex.create({
 export default function Copy() {
   return (
     <div>
-      <Text component="h1" id="contact.title" color="--neutral-color-800" type="h4" />
+      <Text component="h1" type="h4" style={styles.title}>
+        Discover how we can accelerate your product development in less than two weeks
+      </Text>
       <div className={stylex(styles.tasks)}>
         <Flexbox flexDirection="column" rowGap={24}>
           <Flexbox alignItems="center" columnGap={16}>
             <Icon icon="task_alt" size={32} weight={400} grade={-25} opticalSize={48} />
-
             <div>
-              <Text type="s0b" color="--neutral-color-800" id="contact.dot1" />
+              <Text type="s0b" color="--neutral-color-800">
+                Talk to a Serpa engineer
+              </Text>
             </div>
           </Flexbox>
 
           <Flexbox alignItems="center" columnGap={16}>
             <Icon icon="task_alt" size={32} weight={400} grade={-25} opticalSize={48} />
-
             <div>
-              <Text type="s0b" color="--neutral-color-800" id="contact.dot2" />
+              <Text type="s0b" color="--neutral-color-800">
+                We help you create a prototype for your project
+              </Text>
             </div>
           </Flexbox>
 
           <Flexbox alignItems="center" columnGap={16}>
             <Icon icon="task_alt" size={32} weight={400} grade={-25} opticalSize={48} />
-
             <div>
-              <Text type="s0b" color="--neutral-color-800" id="contact.dot3" />
+              <Text type="s0b" color="--neutral-color-800">
+                Receive a migration plan to help you validate
+              </Text>
             </div>
           </Flexbox>
         </Flexbox>
@@ -122,7 +126,7 @@ export default function Copy() {
       <div className={stylex(styles.testimonyContainer)}>
         <Flexbox flexDirection="column" rowGap={32}>
           <h2 className={stylex(styles.trustedTitle)}>
-            <span className={stylex(styles.trustedGradient)}>trusted by +2,000 developers</span>
+            <span className={stylex(styles.trustedGradient)}>trusted by +6,000 developers</span>
           </h2>
           <div className={stylex(styles.logoGrid)}>
             <Flexbox alignItems="center" justifyContent="center">

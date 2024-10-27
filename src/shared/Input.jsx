@@ -1,9 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable no-nested-ternary */
 // @flow
-/* eslint-disable react/jsx-props-no-spreading */
 // Libs
 import * as React from 'react';
 import { useIntl } from 'react-intl';

@@ -1,0 +1,438 @@
+{
+  ".dockerignore": {
+    "uuid": "f1f42c928b0d599edb45f4c9760ddbe00ab4afc4a993eb39d32584e871d5d0dd",
+    "hash": "187afa01f25e03e4edd32724f1245f29c43152bc6db2de4354c31a3f59bbb0eb"
+  },
+  ".eslintignore": {
+    "uuid": "c5d14c379869fb2fbf3e4329d89fc53c22f2e199287318443443202e16dcde86",
+    "hash": "9474da19fd32a1d5c739a167b2c1442598b7e454ca828528d6055ff99406eeea"
+  },
+  ".eslintrc.js": {
+    "uuid": "a8e68b2fa5da30747b98a44b270cd4e9b4f26a7e043f95b97537c61622cc057f",
+    "hash": "8222b8169ee86f25cdccd84d340340060ae3f0cff55e2ea9d344d7c332733b71"
+  },
+  ".flowconfig": {
+    "uuid": "1874bf74940e7b746b52363af32e5d61727b1966fa3c45c9b97d75c37ff35a27",
+    "hash": "99af187c0f3bfe415b1e19cd818b55132c6f54bd5724a1cc411f0b3c23cfc080"
+  },
+  ".prettierignore": {
+    "uuid": "ecfc66171ae1355fc436910a144e510bd72b823ca219d1ac5cac60c1b14ea777",
+    "hash": "e4a3a1720319cef775210a88398b37294c5374438a725fb14c42f647d9705693"
+  },
+  ".prettierrc.js": {
+    "uuid": "b205f7a07a0b4dea594bdb6ba97cee5e8c7174d29e3b0e875190ef3063981f6c",
+    "hash": "ca66a41e0f1a0f70778450e6e3e27cfdb006c682a7c6fe2dd7cdc76a4a478f00"
+  },
+  "CHANGELOG.md": {
+    "uuid": "f75c4fb733ebd423c9c83c051ad66eeed4af410e2a28efcb162f7624b02e7572",
+    "hash": "0f24d3db62f6a85cdcb2820ad262541ada2c42643b758388e9c4bc25ed5892a7"
+  },
+  "Dockerfile": {
+    "uuid": "f73f4cf2f98d76459a13794343fe01f39164a81c2d03fba9af7dc1824e876ae3",
+    "hash": "d4e346dd97fc43abc0f71155c5919f24392be782fa66db610c805f94a5bcc6f7"
+  },
+  "README.md": {
+    "uuid": "3a2cea9ebe50ccda7cdbd42872b9908562a46d5a3190e1d2804f36c83c15d112",
+    "hash": "20e75db14a0355dbc0e1124d5145b0e17a4253e60ed896b94229c7a3afee7660"
+  },
+  "build/asset-manifest.json": {
+    "uuid": "5cc8272d71a0821eb150968deca56ad17945290e2ac58bd657e7162adf68c1db",
+    "hash": "d8c1bd13b63d5b9e3e622ba6aa4fc2ea8f5c3b900e29882bb37d2030a7a70c0b"
+  },
+  "build/browserconfig.xml": {
+    "uuid": "460f4aa4da1214085454f59af1bcb74c9ff8c929599855170ad9d82c64f4ccb2",
+    "hash": "8cedd0c21ead7f661910d7b452150487bba70b95a2325a4b2433220e5e775847"
+  },
+  "build/index.html": {
+    "uuid": "69a24799c31ce911cc7e780a7286192f63bb85f518b0d53d5640aadfc4052933",
+    "hash": "1d7d8618f3347987b0843ba0374d3f71b197023b41e4b819d6ad210662ead01a"
+  },
+  "build/manifest.json": {
+    "uuid": "cd54eac1408b6748b799ab71c8d42f323aeadaf4ddefba4ac7510961eefa36bd",
+    "hash": "92fe82c42d4eac55385e85f8b4413af4c75464ed141653927710f523cf60bf92"
+  },
+  "build/robots.txt": {
+    "uuid": "17d235400c2b5582bdb5c128d1d2dfdac492a32ea696da779c364f90f7a4e26f",
+    "hash": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2"
+  },
+  "build/site.webmanifest": {
+    "uuid": "e9fc5dbf6a66fc04f43c04366fc241b3c09b604515da89813581f754aa115788",
+    "hash": "249d61f0fe35d84f2166ee18294aa00940a95960acbd677164421dee56bc8541"
+  },
+  "commitlint.config.js": {
+    "uuid": "cf7ee75229ad2273d16dd1d0b93d398f977e153124693a85fd6b07147ad07dce",
+    "hash": "acddb0df1763bc79e1065659c2ea8a32a4512b46b902388946752e6e56967173"
+  },
+  "config/env.js": {
+    "uuid": "dc7ef8d569bee010765469c180e7d9f969e2f955926cc3c1554ae2e9d5b87849",
+    "hash": "d96afd430e5ba5a04cdf0c47e0d960ef2092d722db85e7adde7685506619bc43"
+  },
+  "config/getHttpsConfig.js": {
+    "uuid": "a1eaefb7dca0bf7c2689082b59715c64228fb9feb57261729bd956a42d56d849",
+    "hash": "3865841893c190db7d2d1939c4acc913ced70bd86835c05da6eb5c6d04cdb1ea"
+  },
+  "config/jest/babelTransform.js": {
+    "uuid": "ca51039c4ea7f678eedd4d2af4ff1d9689bf75d355c46c7475bdbc3eedc79910",
+    "hash": "785ed26ac1f5d945b1f17abd0f815a240d654cdf6997f286f80783f102bdc1f3"
+  },
+  "config/jest/cssTransform.js": {
+    "uuid": "0b0346a7d4a4a04055f01f386124d80df4ce730fd8e3d4f32e524dbf4d0f7458",
+    "hash": "1ed0e646974f40552839b18d9cbb11c782de554a98e646222b4e761930d8460a"
+  },
+  "config/jest/fileTransform.js": {
+    "uuid": "ad40f562f5b2802107fc43c3bbbe28064907bfcb2b0ae1c529da5390bdba9bd6",
+    "hash": "d2e32954b52b3c320d78233dff63e86c52ec5459679fde0fe2f2a301f1059317"
+  },
+  "config/modules.js": {
+    "uuid": "22ccfd3868d193a5d87e4d7efcdb9b966de38d2ecbb104d5a5f0829d81ae5b73",
+    "hash": "3b1bd74a852d80b0a0c6ba18c69970b2a8b5795a827602a3161d9b7f900cb2cc"
+  },
+  "config/paths.js": {
+    "uuid": "e5cee4f4bd58808888d22681bfc0e3e4fc7620f43dede63052c6d18a74bd80e0",
+    "hash": "1d6868c79a3f9ae11117dd4b20bf583b4bf0c83493d6083ee4a210ef9ce2679a"
+  },
+  "config/webpack/persistentCache/createEnvironmentHash.js": {
+    "uuid": "78b2d3ff308f667a35394d5036af0b4f79f3e4d32df576d2b65ecc051a229cad",
+    "hash": "ee7eef33c19bc05271652818febc7113271456932866cec29809818364ba5af8"
+  },
+  "config/webpack.config.js": {
+    "uuid": "5c2c497858cb2cb6cc34126156bfe45d76e878c428dda2e6691ee1e63929a76c",
+    "hash": "dc33c0dc838b3d5f6ba82680eb266ff9e4c946516b32947fd8d2fff4b5a3b0ea"
+  },
+  "config/webpack.server.js": {
+    "uuid": "7f961ebb4f8883f6101d3c6a87c7bd457cc92bd0268acc418b0337d0d37021d4",
+    "hash": "46b7b400a5d76406f8b2da16a78e62a7797db17f93669b7c46c4ae2e56d9b0ac"
+  },
+  "config/webpackDevServer.config.js": {
+    "uuid": "95d8fd729f89f8a28dd8fcf2bb5f69d9eedf884205c12874b2da7f180e873742",
+    "hash": "c039868c057b2837b55b046348705c4b423805696fdecd6ad2c0cf294c2bfa31"
+  },
+  "flow-typed/global.js": {
+    "uuid": "91caa624d5de3e2976615fda4708b0e46c71c71b7f88fb26b76318b5bb066db5",
+    "hash": "398268ccc6e01d45cb4ceaa6c75be2192d2181c6a86caffb7eaed927bf34a7ca"
+  },
+  "flow-typed/npm/react-router-dom_v6.x.x.js": {
+    "uuid": "f19ae3c28192bd43c59710b20d5bf340618feb197efacec1467db86a0453e4b3",
+    "hash": "7f3e93fd1fc92aa94798739d3358f4148138ab697c026f8d1441e0d7d0a6234d"
+  },
+  "husky.config.js": {
+    "uuid": "703c7a488af725d26f80faa72404d5ad23cc9b18857bd2391a4ad5dcc775f0bc",
+    "hash": "cd5e798a9921432b3110f98c814a85bcee1d91d94e7bdc6b01fa44c3b56ada36"
+  },
+  "lint-staged.config.js": {
+    "uuid": "cea45bf2a4166c73436541f1585867bbc41de6bcec1ec48af99517144fff7526",
+    "hash": "36aa61fe153a418fad481f1ee5bcf23bc7c3fc4dd84bbd3272faa1b3219edadf"
+  },
+  "nginx.conf": {
+    "uuid": "1063c32af27268a59fa85e81c4413fef31e29919eab67976a8d1de8a811bc33d",
+    "hash": "d84068fab51df9c22a218c8cdc32759bdf514db0e1bc6cda67eeb307a5c13abd"
+  },
+  "package.json": {
+    "uuid": "40eb54333412ee1c8e902ec71b8fce995f67e6e7bf79df2d5473fa0dfcd2a67d",
+    "hash": "42e29786edfb17708eca53fddaf527e2eb10992c96ae660fdb5293fcf13ba08b"
+  },
+  "public/browserconfig.xml": {
+    "uuid": "8cb13e3bdcb15c8e3cb576e2c894a6250634a9983dfcd0b9ad483bcc9ebb63c9",
+    "hash": "8cedd0c21ead7f661910d7b452150487bba70b95a2325a4b2433220e5e775847"
+  },
+  "public/index.html": {
+    "uuid": "58845c62753f33aef1f78f4532d2cd970c19d0e8fb09cfdcf3e0bda223cf2bba",
+    "hash": "df7b5ac1082293b6a7a1d5589f0b180972ea33a1b18906175045cb4f0dee9cc9"
+  },
+  "public/manifest.json": {
+    "uuid": "5b196b6e0fca8abe9869a380784348816402ef33ce73a04028f32ae6f6f4c85c",
+    "hash": "92fe82c42d4eac55385e85f8b4413af4c75464ed141653927710f523cf60bf92"
+  },
+  "public/robots.txt": {
+    "uuid": "87bfc8be9f6630cfc289873538aae940a6549f11fb8f831d6f749b0eed739c64",
+    "hash": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2"
+  },
+  "public/site.webmanifest": {
+    "uuid": "65e71aaa5a89d63a7067ee4a99bce0b329346cf38e10b58c2decd5969dc7b9ba",
+    "hash": "249d61f0fe35d84f2166ee18294aa00940a95960acbd677164421dee56bc8541"
+  },
+  "scripts/start.js": {
+    "uuid": "9918f7a939db09d83be144bf4f736067dd0d83aafc12b244396c7c910bb16d51",
+    "hash": "7363dc4c0db3b4dbfe2c4d1d5ee2191cbc2aae1930f9bcf2370d33fde4937430"
+  },
+  "scripts/test.js": {
+    "uuid": "65751339cf967450eff315053bce870f5be2b7da583e8bb8ce7b033be3e4f7b4",
+    "hash": "83cd72112a9c76f3ec417184ac1711c0d1d640731bc6e8aa4a5d57aa84ab0a94"
+  },
+  "src/Analytics.jsx": {
+    "uuid": "12ff27d5f6ebdcbccf31e267f4cfecd4b369da034c066be7754f8821f6a135a6",
+    "hash": "273fb23dd4e281463440053445bb500825b971a2666978a19b5d97921f5c8919"
+  },
+  "src/App.jsx": {
+    "uuid": "3afe616c360f15f5b3f3387cb0283d99dec3f7a1a59621b87efa2835c19a6e2b",
+    "hash": "b51154ed255453bf0a626b50cfaee4212e72f4a6c81283f591381c6f5f5687c2"
+  },
+  "src/ContactUs/Content.jsx": {
+    "uuid": "b3c5c7683684888e3a3376a0f837aa6547acf25948936d680278fa19eb1095e4",
+    "hash": "93f92004c96801b0326a3b95d97a0066499272fdc0ac54c37d3f4adc6ae1dedc"
+  },
+  "src/ContactUs/Copy.jsx": {
+    "uuid": "ae1112e6445ac1b5dfa9a9a8762a9475bf23ae75d90fe0fc8188f1eef6416d23",
+    "hash": "da0f3fe6b52b515d642584547d5080a4bbbe35ddf79fbea73111dfc82e3fc09f"
+  },
+  "src/ContactUs/Form.jsx": {
+    "uuid": "aa1b5867e319f005bef03a9b0b0b839447db485eb186eb3da9b632b5d5f87c87",
+    "hash": "ebf013df60b5ea93f9a531204187e56154426ad2bf05805eef52b15beefe5613"
+  },
+  "src/ContactUs/index.jsx": {
+    "uuid": "a89fb453fbe7b9f8cb45561453b7da925846132f5e9969533f6ded7033ec6bdb",
+    "hash": "a0cc82689055ea000a3edfacc56e1e6eb9d62d1a5ed00969298f46677b50d504"
+  },
+  "src/LandingPage/Content.jsx": {
+    "uuid": "d3857b95c02f115a7dfb55f9a6b7cfc1700760b6f27c7e70387c78aa3959f09a",
+    "hash": "b6ddf4ae9893fe19174d1a7471591cfa3bb68b4ef80dcca67328ead0947ddab5"
+  },
+  "src/LandingPage/Header.jsx": {
+    "uuid": "70efd78066860cd6834200463e7e46b6a9229cda76da2998324c20615c356ca4",
+    "hash": "291264d434790f53fd9f8f3a00e184c0d44401aa0c62102ef4a0fc1b243c466a"
+  },
+  "src/LandingPage/Header.scss": {
+    "uuid": "222076e1ca9baff59048bb3b299f4665478f8ca76da81baca205ea7508b6900f",
+    "hash": "a233949ff814c863f4a315b63eb3dd9e8c031d460d1b98b40279dedc8b3995ae"
+  },
+  "src/LandingPage/HeroCard.jsx": {
+    "uuid": "b9978ee6b7c5206009c4a4d05d37f7b5af6d96630d41ac3f77eb46df8858fd0e",
+    "hash": "41cd110ffe60c4f8b7588dc46a485d80cbff3d9495c36e58d91f0d5aab5ebc61"
+  },
+  "src/LandingPage/index.jsx": {
+    "uuid": "e235313a41db09a441563b935b21560c9f2d05c559963bf462399a44c27d819d",
+    "hash": "5158eb3cb6825e357750c2c7a92157bee7c8a2899754bc98c9c71ccdecb0600f"
+  },
+  "src/LandingPage/sections/Features.jsx": {
+    "uuid": "dc5f82a0e41a546d81d2d9560584340722aa0504b3e50c5380563a0c5f94ef05",
+    "hash": "231b3fd271a0ae96b8a38c4d0168cf12671982cde5cd28c47ead9ea8c0b6150b"
+  },
+  "src/LandingPage/sections/Features.module.scss": {
+    "uuid": "481ab7b4a3f3a6f8ff24378efea34de346e14964fa20a3ba5791b1b22557c6f5",
+    "hash": "f5743e0ec104d90f2168b5a9e6369fb9cebf7c91a7d5a2f365851b5139e984a1"
+  },
+  "src/LandingPage/sections/Footer.jsx": {
+    "uuid": "6afd5287d8b66a8650d5b23a4200117d616780e2bc511f3a26bfbbea8943e7f9",
+    "hash": "7c8663f80256cb3ca987831d8162b1554fe2ae2ff2f5311862c8c52489141810"
+  },
+  "src/LandingPage/sections/Hero.jsx": {
+    "uuid": "bff1b0323ae54f253eb63d379975bf46e50878b731cec6a67d5be23db0b416cf",
+    "hash": "9c9bcc25c17c64af6e7579e4218e4ff91ee7d39b02b1e3d4d0368101e15e7dce"
+  },
+  "src/LandingPage/sections/Hero.scss": {
+    "uuid": "e063df703912528fbf7f54df0f109c36849192458ce5b2bb0cf125584c3679aa",
+    "hash": "7a46c1f114207b56285cdcb0df93b700f16573540d67255ef84e02a2e1e7a86f"
+  },
+  "src/LandingPage/sections/HeroBackground.jsx": {
+    "uuid": "0dfe1f74f2015e49e0230efc9a078de5e8ce3ab879d5dfcf356b7e0ccc06457e",
+    "hash": "5c3ce0ba88eb7f25ad7b7e45cca6bb8cec021f0e2cb94bf88c5ed6091de26ce0"
+  },
+  "src/LandingPage/sections/HeroBackground.module.scss": {
+    "uuid": "eaffd563ecfc9e8e8d5086f3e4049860e830f9775df682f5c77d9b0e67dd88ca",
+    "hash": "c94d737ebb8e042dcb76cc302182578828f43c58a7ddfe921f0b54921bfa9410"
+  },
+  "src/LandingPage/sections/KubernetesMap.jsx": {
+    "uuid": "f88c53c85edfe75dbc447a477f43c2bccc70cc9ab767b24c9a5f8ef33a14ecf5",
+    "hash": "e893a825d8aabb048f043deeeb2fe8f5ec8ac57b1cb0db972592d6aeecf42a4f"
+  },
+  "src/LandingPage/sections/NetworkMap.jsx": {
+    "uuid": "4422a76f3e354969810b8b79e36a0f91630a55a7845ffc9b87fab88c9c5046ed",
+    "hash": "985adf33bfde1d824351e57165a11c86c9386d0b32b77870c2f3618359871b45"
+  },
+  "src/LandingPage/sections/OS.jsx": {
+    "uuid": "831b4e6b77b817fedd4bef3f0e454845270c7b801d76c52f1427264d4a8aa873",
+    "hash": "afd8d81b8462c50b8dea29a7c82c4c86bd6caf1fc4570f74edd4305059e3d38c"
+  },
+  "src/LandingPage/sections/QuoteCard.jsx": {
+    "uuid": "cb32086ea3849143b6aca7b992b108c1829c5e1f2851ddb893f0f0ce25e7e737",
+    "hash": "1ac66333aa95386b914ea690ee94a0d61596d87cf6a6ed804d9cdabb30eb32c6"
+  },
+  "src/LandingPage/sections/Quotes.jsx": {
+    "uuid": "b3a1f033cbb9d40d56545c7aef5bded013d458aecf3bcabedab424edebff8486",
+    "hash": "03cdaea1230ad6e987e2a846f70227e2120f9323998962a02c9855a95ad22c3f"
+  },
+  "src/LandingPage/sections/Quotes.module.scss": {
+    "uuid": "1ab233b96374b165a6513c0e2573873a4abd003d9d314d93b9b84e87e5bd5329",
+    "hash": "a92be6c092e710dcf7d463e9c7f59af239b35695917e55e4b1270939cb3caa45"
+  },
+  "src/LandingPage/sections/Tech.jsx": {
+    "uuid": "89bb23a9d499de739c90d9c9180fd24f68201712f4bdaf23dbd4da4ca9f59464",
+    "hash": "3259eb3aabf52369ee2bf7ab05b1ba576b3960169427f104d060a6a888d59b70"
+  },
+  "src/LandingPage/sections/Trust.jsx": {
+    "uuid": "fef3ec09a66e92957504b7bc1c8bac5150d10f8056f58517d377bd6af9788db5",
+    "hash": "f2adaf6e47e842f87cf8a30bd1977ffb1f8c4b571883597c831e85f4c3fdae69"
+  },
+  "src/LandingPage/sections/Trust.module.css": {
+    "uuid": "ef2151386a62cb67dda11492a249d6097837dc1cf126b13a19c3a25e1c896811",
+    "hash": "6c1402d362861100ded4ae453a6f1d68f3cafa116ff527eecc91ad59ea98d0be"
+  },
+  "src/LandingPage/sections/manhattan.json": {
+    "uuid": "263c8f622ba24949a558f80600ef3996dce8e784fa5f9aecadbce8f2ddc176bf",
+    "hash": "86de7693aea2fd10fced5a378123725bdc9da90d24be0380576509df660be617"
+  },
+  "src/LandingPage/sections/mapStyle.json": {
+    "uuid": "0fd3170af07713dca4dcd397c261aa73bcc26e78babbe3c3dd20d51badd8f596",
+    "hash": "b87acfa81f4c07ab1ea32f33ad2cb8fe8ac7fcff00e9e3538ecd923c0f336831"
+  },
+  "src/Tutorials/VideoLanding/VideoDetail.jsx": {
+    "uuid": "bb5c1f3b22f94494309d5a0fd76f0dbcaa952142d5922ccdcac609cd2b414829",
+    "hash": "88a30d0653088fffce4f920ab62ca2a5fb24ea430cf1c7acd2dc42c00ff79d77"
+  },
+  "src/Tutorials/VideoLanding/index.jsx": {
+    "uuid": "02287a78fc7c168af8f18ffa3f4266b471d539cd52026dce7c43a21d203c2657",
+    "hash": "03cf34021f2402afc0bacc0827a2feb41c104f47cebf369c43fd85ca10190dc2"
+  },
+  "src/Tutorials/VideosList/VideoListElement.jsx": {
+    "uuid": "bd5e69dd607ef78e79f8b84161ae55c3bd892912ef7a1c2133df22d6cd1bfd57",
+    "hash": "ee89f69ac14e380dd9cc1abd384d44daec4da2a8c81449ab5ed3e3310536c309"
+  },
+  "src/Tutorials/VideosList/VideoListHero.jsx": {
+    "uuid": "48649b6117062e020d035c458a69db2f3f0a9935640e92c3f1ffdd57be55aef4",
+    "hash": "ab8c3de6b7d6ff293ee9a04c285f79fba63aed46ffc0fe5b87099f05e1f7347f"
+  },
+  "src/Tutorials/VideosList/VideosList.jsx": {
+    "uuid": "8598b260b58fb9e1c9197214eba56be5f3fe7e32f7076d65e814fa768320c36c",
+    "hash": "5e78c9746570459987720c9345eeaa67b2a8c23cf635fdfb5132455da74f0427"
+  },
+  "src/Tutorials/VideosList/index.jsx": {
+    "uuid": "56e19b7ca8f19d502faa811ca27ad45d9c4c9a3f67ff723dde00e0592de81a78",
+    "hash": "79127ace3d673f7da669967a7b0426852cacc86519a5fed728ed33fdfe6731a9"
+  },
+  "src/Tutorials/index.jsx": {
+    "uuid": "b56aaa421fc05faf631c8d7e3dec2af96c27209f42fedf56d89154d42623c525",
+    "hash": "29417018c1d962c056a1ed7c67f8764d0ab7e5ee1028a10054d5912f12e382c8"
+  },
+  "src/Tutorials/videosObject.js": {
+    "uuid": "ea8fbf1b084a252b8a093f196d30b36196d30fb9771e71e42aa75c9da47b2b2d",
+    "hash": "576a545791559d1e84d69ee6a20b13215b8d5cae96dc67d6af4bcb502986f20b"
+  },
+  "src/Tutorials/videosObject.json": {
+    "uuid": "88e3399eddb652f7cf0809b97f50a20235ccf9f85d6b11f84a1511763d5533a8",
+    "hash": "d1c52f5006cb947d9ba8ddf63218bd66687e513f6c7bdb6f548868423ff225ff"
+  },
+  "src/Waitinglist/Waitinglist.module.scss": {
+    "uuid": "1baf7d09840697c2e10c7012ba04e89689da43d5f4ba089641e9918004fb0d26",
+    "hash": "73503254e9460601d677b2b0bea9faaa36ae3a5c38f635ce4b6bd668126f568c"
+  },
+  "src/Waitinglist/index.jsx": {
+    "uuid": "548433f4428981cbab0a96bece62e9fac0396acbe5d9b3a055ed581712328f42",
+    "hash": "0a55874959bd90218e9f9fac3464f3881ff5dfd41e62337d349cba6fff77339c"
+  },
+  "src/context/ResizerProvider.jsx": {
+    "uuid": "56ec9a7d0f897b12212ff9c6926327141dfa77610b720581c74b5d498da0235c",
+    "hash": "587d7d26f76ae7a3c1a68290b11beca9be3ec55c9916987bf1022f0f928ba4f1"
+  },
+  "src/hooks/useDevice/deviceTemplate.js": {
+    "uuid": "64a04042454ff1faccb9c6adec818a86c5f9bae26545ab7a06576605a324446b",
+    "hash": "4d1f2944c4b235ddc55b398257a75e4efb79e4ce561c8e60a5b9ec89b8827b2e"
+  },
+  "src/hooks/useDevice/index.js": {
+    "uuid": "f552f0936350bcfdc6e71aef9e19ab773c64e493956cdf811f05b2d57374e7ab",
+    "hash": "36a396887860e453133a41ca3fec33588ad384518ba2414459ada366c6ea314c"
+  },
+  "src/hooks/useDevice/resizerFunction.js": {
+    "uuid": "98ec2709ccca8e5b678ec658d53ba6c0147898f811966ebd06daf8e5de99f035",
+    "hash": "d563b03489336801c36cd5af29860c30a397e568d81dd53a99b848e05403af28"
+  },
+  "src/index.js": {
+    "uuid": "47ce3b8562aba65b4d4932ee369f6e7ce7a3e9e8a1e68386d4a5506a2e524990",
+    "hash": "fad1a2066319360caad18800ac7f7fcd7804c854614d44f55171fc6f506eedaf"
+  },
+  "src/server.js": {
+    "uuid": "1e239a0a6b2ea6f41cccd70c3b1660fe2eabbf56101bcadb9dc68d3e80cc968d",
+    "hash": "c3a9698ed2efb38eabc8c5da39fb50151e53ebbc815fd036d49084e7dd985593"
+  },
+  "src/setupTests.js": {
+    "uuid": "1d91002b11fa12dc357e8e42280e6186a53bea8b69e4899759feaf9975822868",
+    "hash": "22583759d0045fdf8d62c9db0aacba9fd8bddde79c671aa08c97dcfd4e930cc6"
+  },
+  "src/shared/Button.jsx": {
+    "uuid": "ae08c7cb713db2e77eb8615d596f49ececbd5e551907e877587099acc08c1016",
+    "hash": "1715e9287692ab52b746a0abc3e03a6701f4e2fe0eae391ecccb945dc035650e"
+  },
+  "src/shared/Card.jsx": {
+    "uuid": "01699b526483f0b12c41ede8c350400199b4c7aa8218ee68cf9173ffd85cc023",
+    "hash": "3ecb23ab6eaea1b75f67d5b11ddd2fbb13b5b194f59fb4f02837552b4240a83d"
+  },
+  "src/shared/Cascader.jsx": {
+    "uuid": "fe597128175d98df93be74c8679e2a0b62af529e992855a45ae954b254c87e4f",
+    "hash": "4662f2dff0467b8083a3b66fb31529b2757928d888fe6135345d821d83203aea"
+  },
+  "src/shared/Checkbox.jsx": {
+    "uuid": "e9d310ca9e89513066edc5769f9eda3ac9122023551202f935ee0d6982ee1a55",
+    "hash": "415ad824a1c84d4bf26c25bbedb62d186ec135dff0d1f1f9ace61094e694a1ab"
+  },
+  "src/shared/ContextualMenu.jsx": {
+    "uuid": "23e1db9c5f178817838cbe6e49155cd9c060ed12ffe84833aca69d215ec7dea8",
+    "hash": "ea966e19e311a6d1cd426dbcf422608fa7aa7167ceee4f7fd913c36067531645"
+  },
+  "src/shared/Divider.jsx": {
+    "uuid": "354c5a42ac819ccbd06a403836c131b58b6d82d04dc895f362e7a93cbd7da191",
+    "hash": "997c43eaad0a1d889675ff0662981666ac4f033e29e12990e7395e9f5b083fb1"
+  },
+  "src/shared/FastSearchInput.jsx": {
+    "uuid": "342dd65642f1b7e921ff57a6ebf6c69851ec64419572fbcaa6af3df3ebed5c9e",
+    "hash": "e59fc1e180259d624a2c20b67f5a3fa6de859c8da54a04c0267dabf08416971d"
+  },
+  "src/shared/Flexbox.jsx": {
+    "uuid": "d642e46799ea9070264b53e6d15ecd964c386c0f3dc609e75a4167367a7689ef",
+    "hash": "114e347bd06b8ea9bae3d9e860d199898af35f2b289eddaa45d1ae970107c51c"
+  },
+  "src/shared/Grid.jsx": {
+    "uuid": "e05c5aadc1b936815b1c306f6beb1b5bdedb12e993ac7378d21c5d9a3bda12fc",
+    "hash": "8f493daa83f081939a1d1fb3e1c1a7a2f39414d5193c0d14e699b15d00f644b0"
+  },
+  "src/shared/Icon.jsx": {
+    "uuid": "9cd7eb34d3fead10adc2a133581eed6ad6a8506d358fe76a10a2bf09036c469b",
+    "hash": "bfd35480cbf2521b6891911f73ed032867ea657c9f397aed923fba8d5ae7f236"
+  },
+  "src/shared/Input.jsx": {
+    "uuid": "1d8c2911703a6838f734daded203d6b59bdcb40b61b9a508b8a1fe0f569a53b6",
+    "hash": "ea2853e6962c8dabd6d1f13df9001c0982f65dd2e0c4c346617f4083fa83b973"
+  },
+  "src/shared/InteractiveElement.jsx": {
+    "uuid": "cc8b330776338888ef35437a3d27bed5f724eb6709d9d66b719cd2800155be71",
+    "hash": "68128184768541badd23c8213681c5b1c3f56a5af5dfde6060df39a6f489a7b4"
+  },
+  "src/shared/Margin.jsx": {
+    "uuid": "a4aff9fb86253699bf62bc2e68556afdb0fe3cf1cab2b3efa6d50e23404ab52f",
+    "hash": "c9652f3693411119be9b80a55237be0d6d4357ccee31caa9f089f3eb0dd4b460"
+  },
+  "src/shared/Modal.jsx": {
+    "uuid": "cbc15ac8b4619a086496e1251d875e6f4e5a7ed95ddd944ca4eab6390ec93e03",
+    "hash": "89c8edaaecfb7c2e66d107bbf3215c3ffe909fd17f83e741f50fdf1931392cd4"
+  },
+  "src/shared/Padding.jsx": {
+    "uuid": "8e7770edfd65e5d6c08f71239414a80207782840ac0df05444cbc436546140e9",
+    "hash": "9162394bb69eac4f61ceabe38a85ad9995d90de7cff98d5c3bb51cdaa18b11c0"
+  },
+  "src/shared/Spinner.jsx": {
+    "uuid": "332182d477ebccdc3844d6f61dd8b3b81c736fb229a771ed7faaa7f3b96f79b3",
+    "hash": "9f560fef299f4d66dc372901d8c46f48330971cd3b99c991cd2f2f73c0510fa9"
+  },
+  "src/shared/Text.jsx": {
+    "uuid": "93a0f94a5708b46ce227dcd5c0fba443eb975244d693e3dc00674e4dcdf760a9",
+    "hash": "f2cb0e20726e3a715bc288466c49cb91c325ee7a33e657e6768afd846361edbb"
+  },
+  "src/shared/index.js": {
+    "uuid": "77011da770dfb3f3f5ae148086a25dcf9d706bfb51f0d75e65d90672b5f0fc83",
+    "hash": "ea5b2a68b9b146200c903666298bc3ab91f1166e2ae4ca6339e759f72ded242f"
+  },
+  "src/shared/styles.css": {
+    "uuid": "c1a2461d051a1281bd0247a084dc2fa3e257fd49f23b680f20027f5858a1744a",
+    "hash": "f116e3ae97c2471a2eb45ca79920eaed226160cde0e74eecb78f3478882e3be6"
+  },
+  "src/shared/utils/invariant.js": {
+    "uuid": "2c18a665953924af914bcc3e9996eefac43a9a2c17c7aa56485e9aaca4abb0a3",
+    "hash": "0fc95faca3536ab6ed49a78f96b5867bc0c98330d81d7e33db3e1a63c37e0d12"
+  },
+  "src/translations/english.json": {
+    "uuid": "83b861215d526f5abb44e8ea6b4e7a7b461f977a2de1ec6c135f02008df15de0",
+    "hash": "63086c8e0ee110e126e33c79cb6c3f42f3cebd0c3c6c3205b53456c4e55d07a8"
+  },
+  "src/translations/spanish.json": {
+    "uuid": "5cf00a332321bbe75c124d5c41fdfd34535f26cfcd355c9d0d0252555eb42312",
+    "hash": "2cb206b3a8e15c13e6df3d2035803e1b5fd54d4f96c07ed606fdbd765e568648"
+  }
+}

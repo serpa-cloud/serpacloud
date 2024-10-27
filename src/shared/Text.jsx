@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 // @flow
 import React from 'react';
 import { useIntl } from 'react-intl';

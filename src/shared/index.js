@@ -17,6 +17,7 @@ import Margin from './Margin';
 import Padding from './Padding';
 import Spinner from './Spinner';
 import Text from './Text';
+import Modal from './Modal';
 
 // Provider
 
@@ -28,7 +29,6 @@ import Text from './Text';
 
 export {
   // Components
-  // eslint-disable-next-line import/prefer-default-export
   Button,
   Card,
   Cascader,
@@ -45,6 +45,7 @@ export {
   Padding,
   Spinner,
   Text,
+  Modal,
   useInput,
   validateData,
 };

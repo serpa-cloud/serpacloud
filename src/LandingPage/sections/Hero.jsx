@@ -17,23 +17,28 @@ function Hero(): React$Node {
           alt="Serpa CodeGen AI"
           className="heroImage"
         />
-        <div className="toolbar">
-          <a href="#waitinglist" className="mainButton">
-            Request Access
-          </a>
-          <a href="https://app.serpa.cloud/demo" className="secondaryButton">
-            See Demo
-          </a>
-        </div>
         <div className="heroTitle">
           <div className="heroContent">
             <h2 className="principalTitle">
               <span className="titleGradient">Serpa CodeGen AI</span>
             </h2>
-            <h2 className="mainTitle">The AI developer that multiplies your productivity by 20x.</h2>
+            <h2 className="mainTitle">
+              The AI developer that multiplies your productivity by 20x.
+            </h2>
             <p className="heroDescription">
-              Build products faster than ever, regardless of your development experience level. Integrate our AI model directly into your codebase and ask it to develop any functionality you need. Apply the code directly from the application.
+              Build products faster than ever, regardless of your development experience level.
+              Integrate our AI model directly into your codebase and ask it to develop any
+              functionality you need. Apply the code directly from the application.
             </p>
+          </div>
+
+          <div className="toolbar">
+            <a href="#waitinglist" className="mainButton">
+              Request Access
+            </a>
+            <a href="https://app.serpa.cloud/demo" className="secondaryButton">
+              See Demo
+            </a>
           </div>
         </div>
       </div>

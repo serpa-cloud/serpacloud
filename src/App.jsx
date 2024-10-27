@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 // @flow
 import { memo } from 'react';
 import { IntlProvider } from 'react-intl';

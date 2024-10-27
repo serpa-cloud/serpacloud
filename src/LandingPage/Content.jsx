@@ -1,19 +1,15 @@
 // @flow
 import stylex from '@serpa-cloud/stylex';
 import { useRef, useEffect, memo } from 'react';
-import { useSpring, animated } from 'react-spring';
 
 import Header from './Header';
 import HeroCard from './HeroCard';
 
 import Hero from './sections/Hero';
-
-import calabi from './assets/calabi.png';
-import Languages from './sections/Languages';
 import Quotes from './sections/Quotes';
 import Footer from './sections/Footer';
-import KubernetesMap from './sections/KubernetesMap';
-import Enterprise from './sections/Enterprise';
+import Features from './sections/Features';
+import Waitinglist from '../Waitinglist';
 
 const styles = stylex.create({
   main: {
@@ -22,7 +18,6 @@ const styles = stylex.create({
     marginRight: 'auto',
     boxSizing: 'border-box',
     paddingTop: 56,
-    maxWidth: 1200,
   },
 
   heroImageContainer: {
@@ -53,92 +48,36 @@ const styles = stylex.create({
   },
   section: {
     marginTop: 80,
+    maxWidth: 1344,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    borderLeft: '1px solid var(--neutral-color-400)',
+    borderRight: '1px solid var(--neutral-color-400)',
     '@media (max-width: 440px)': {
       marginTop: 0,
     },
   },
+  intermediate: {
+    height: 80,
+    borderBottom: '1px solid var(--neutral-color-400)',
+  },
 });
 
 function Content(): React$Node {
-  const [calabiStyles, animateCalabi] = useSpring(
-    () => ({
-      y: 0,
-      opacity: 1,
-    }),
-    [],
-  );
-
-  const scheduledAnimationFrame = useRef<boolean>(false);
-
-  useEffect(() => {
-    function handler() {
-      const scrollTop = window?.scrollY ?? 0;
-
-      if (scrollTop < 1000) {
-        animateCalabi.start({
-          y: scrollTop / 3,
-          duration: 0.5,
-          opacity: 1 - Math.min(Math.max(0, scrollTop - 100), 300) / 600,
-        });
-      }
-
-      scheduledAnimationFrame.current = false;
-    }
-
-    function onScroll() {
-      if (!scheduledAnimationFrame.current) {
-        scheduledAnimationFrame.current = true;
-        requestAnimationFrame(handler);
-      }
-    }
-
-    window?.addEventListener('scroll', onScroll);
-    return () => {
-      window?.removeEventListener('scroll', onScroll);
-    };
-  }, [animateCalabi]);
-
   return (
     <div>
       <div className={stylex(styles.main)} id="landingScrollElement">
         <Header />
-
-        <HeroCard>
-          <div className={stylex(styles.heroImageContainer)}>
-            <animated.img
-              src={calabi}
-              alt="Decentralized Cloud Computing"
-              className={stylex(styles.heroImage)}
-              style={calabiStyles}
-            />
+        <Hero />
+        <div className={stylex(styles.section)}>
+          <Features />
+          <div className={stylex(styles.intermediate)} />
+          <Quotes />
+          <div className={stylex(styles.intermediate)} />
+          <div id="waitinglist">
+            <Waitinglist />
           </div>
-
-          <Hero />
-        </HeroCard>
-
-        <div className={stylex(styles.section)}>
-          <HeroCard>
-            <Languages />
-          </HeroCard>
-        </div>
-
-        <div className={stylex(styles.section)}>
-          <HeroCard>
-            <KubernetesMap />
-          </HeroCard>
-        </div>
-
-        <div className={stylex(styles.section)}>
-          <HeroCard>
-            <Enterprise />
-          </HeroCard>
-        </div>
-
-        <div className={stylex(styles.section)}>
-          <HeroCard>
-            <Quotes />
-            <Footer />
-          </HeroCard>
+          <Footer />
         </div>
       </div>
     </div>

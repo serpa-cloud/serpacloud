@@ -86,12 +86,12 @@ export function getDocumentTitle(pathname: string, locale: string): string {
   if (matchResult) {
     const message: string = translations[matchResult.title];
 
-    if (!message) return 'Serpa Cloud';
+    if (!message) return 'Desarrolla 20x más rápido con Serpa Cloud AI';
 
-    return `${message} | Serpa Cloud`;
+    return `${message} | Desarrolla 20x más rápido con Serpa Cloud AI`;
   }
 
-  return 'Serpa Cloud';
+  return 'Desarrolla 20x más rápido con Serpa Cloud AI';
 }
 
 export default function Analytics({ children }: Props): React$Node {
@@ -103,7 +103,7 @@ export default function Analytics({ children }: Props): React$Node {
 
     if (matchResult) {
       const message = intl.formatMessage({ id: matchResult.title });
-      document.title = `${message} | Serpa Cloud`;
+      document.title = `${message} | Desarrolla 20x más rápido con Serpa Cloud AI`;
 
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: 'page_view' });
