@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/yellow-code-io/serpacloud/compare/v1.3.1...v1.4.0) (2024-10-27)
+
+
+### Features
+
+* hero ([e936948](https://github.com/yellow-code-io/serpacloud/commit/e936948a43bb1aa55fa27e53daad49a55fcfc326))
+* **landing:** change to serpa ai ([c6433bf](https://github.com/yellow-code-io/serpacloud/commit/c6433bf9a9ee121b480b95ae0d790d678c8afdd9))
+
 ### [1.3.1](https://github.com/yellow-code-io/serpacloud/compare/v1.3.0...v1.3.1) (2024-08-01)
 
 
