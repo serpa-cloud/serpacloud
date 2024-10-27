@@ -53,7 +53,6 @@ export default function InteractiveElement({
 
   useEffect(() => {
     if (autoFocus) ref.current?.focus();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

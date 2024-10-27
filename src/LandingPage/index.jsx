@@ -2,7 +2,6 @@
 import { memo } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
-import Grid from './Grid';
 import Content from './Content';
 
 const styles = stylex.create({
@@ -18,7 +17,6 @@ function LandingPage(): React$Node {
   return (
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
-        <Grid />
         <Content />
       </div>
     </main>

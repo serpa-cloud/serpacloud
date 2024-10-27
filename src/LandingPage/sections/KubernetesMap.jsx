@@ -1,16 +1,11 @@
 // @flow
-/* eslint-disable import/no-extraneous-dependencies */
 
 import DeckGL from '@deck.gl/react';
 import { useIntl } from 'react-intl';
 import stylex from '@serpa-cloud/stylex';
-import { Map } from 'react-map-gl/maplibre';
 import { memo, useRef, useState, useEffect } from 'react';
 
 import { Icon, Flexbox } from '../../shared';
-
-import data from './manhattan.json';
-import mapStyle from './mapStyle.json';
 
 import gcp from '../assets/gcpWhite.png';
 import aws from '../assets/awsWhite.png';
@@ -231,7 +226,6 @@ const styles = stylex.create({
   mapContent: {
     position: 'relative',
     zIndex: 2,
-    backdropFilter: 'brightness(80%) blur(0.5px)',
   },
   gridFeatures: {
     display: 'grid',
@@ -247,7 +241,7 @@ const styles = stylex.create({
     color: 'var(--secondary-color-3)',
   },
   mapRootContainer: {
-    marginTop: 24,
+    marginTop: 40,
     position: 'relative',
   },
   mapContainer: {
@@ -357,12 +351,9 @@ const styles = stylex.create({
   },
   toolbar: {
     display: 'flex',
-    justifyContent: 'center',
-    paddingBottom: 80,
-    paddingTop: 80,
-    paddingLeft: 16,
-    paddingRight: 16,
+    paddingBottom: 40,
     boxSizing: 'border-box',
+    marginTop: 40,
     '@media (max-width: 680px)': {
       display: 'block',
       width: '100%',
@@ -576,40 +567,11 @@ function KubernetesMap(): React$Node {
             </h4>
           </div>
         </div>
-      </div>
 
-      <div className={stylex(styles.centered)}>
-        <div className={stylex(styles.innerContent)}>
-          <div className={stylex(styles.mapRootContainer)}>
-            <div className={stylex(styles.mapContainer)} ref={viewRef}>
-              <DeckGL
-                controller
-                layers={layers}
-                initialViewState={INITIAL_VIEW_STATE}
-                viewState={view}
-                style={{ width: '100%', height: '100%', maxWidth: '1800px' }}
-                useDevicePixels={false}
-              >
-                <Map reuseMaps mapStyle={mapStyle} />
-              </DeckGL>
-            </div>
-
-            <div
-              className={stylex(styles.mapContent)}
-              style={{
-                backgroundImage: `url("${noiseUrl}")`,
-              }}
-            >
-              <div className={stylex(styles.toolbar)}>
-                <a
-                  href="https://app.serpa.cloud/session/signup"
-                  className={stylex(styles.mainButton)}
-                >
-                  {intl.formatMessage({ id: 'landing.signup.callToAction' })}
-                </a>
-              </div>
-            </div>
-          </div>
+        <div className={stylex(styles.toolbar)}>
+          <a href="https://app.serpa.cloud/session/signup" className={stylex(styles.mainButton)}>
+            {intl.formatMessage({ id: 'landing.signup.callToAction' })}
+          </a>
         </div>
       </div>
     </section>

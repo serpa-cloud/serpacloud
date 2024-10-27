@@ -1,0 +1,130 @@
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 6px 4px rgba(7, 7, 10, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100vw;
+  height: 56px;
+
+  @media (max-width: 880px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.logo {
+  column-gap: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 16px;
+  color: var(--neutral-color-800);
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 0.85;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.mainLinks {
+  display: flex;
+  align-items: center;
+  column-gap: 48px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+
+  @media (max-width: 880px) {
+    display: none;
+  }
+
+  .singleLink {
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+  }
+}
+
+.button {
+  letter-spacing: 0.05em;
+  line-height: 0.85;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 40px;
+  color: var(--neutral-color-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+  background: none;
+  border: none;
+}
+
+.buttonDownload {
+  background: linear-gradient(45deg, var(--pink-solid-color) 0%, var(--orange-solid-color) 100%);
+  color: var(--neutral-color-100);
+}
+
+.buttonMenu {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  @media (min-width: 880px) {
+    display: none;
+  }
+}
+
+.buttonActive {
+  color: var(--neutral-color-100);
+}
+
+.menu {
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  position: fixed;
+  padding-top: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+
+  @media (min-width: 880px) {
+    display: none;
+  }
+}
+
+.singleLinkMenu {
+  color: var(--neutral-color-800);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 0.85;
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

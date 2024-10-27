@@ -2,7 +2,6 @@
 import { memo } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
-import Grid from '../../LandingPage/Grid';
 import Hero from './VideoListHero';
 import VideosList from './VideosList';
 
@@ -23,7 +22,6 @@ function Tutorials(): React$Node {
   return (
     <main className={`LIGHT ${stylex(styles.main)}`}>
       <div className={stylex(styles.body)}>
-        <Grid />
         <div className={stylex(styles.content)}>
           <Hero />
           <VideosList />

@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-/* eslint-disable import/no-dynamic-require */
 // @flow
 import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';

@@ -1,6 +1,5 @@
 // @flow
-import { useCallback } from 'react';
-import { useIntl } from 'react-intl';
+import { useCallback, useState } from 'react';
 import stylex from '@serpa-cloud/stylex';
 
 import { Text, Flexbox, Padding, useInput, Input, Button, validateData } from '../shared';
@@ -17,25 +16,25 @@ const styles = stylex.create({
 });
 
 export default function Form(): React$Node {
-  const intl = useIntl();
+  const [pending, setPending] = useState(false);
 
   const name = useInput({
     name: 'name',
     required: true,
-    label: intl.formatMessage({ id: 'contactForm.firstName' }),
+    label: 'First Name',
     value: '',
     errors: {
-      requiredError: intl.formatMessage({ id: 'input.requiredError' }),
+      requiredError: 'This field is required',
     },
   });
 
   const lastName = useInput({
     name: 'lastName',
     required: true,
-    label: intl.formatMessage({ id: 'contactForm.lastName' }),
+    label: 'Last Name',
     value: '',
     errors: {
-      requiredError: intl.formatMessage({ id: 'input.requiredError' }),
+      requiredError: 'This field is required',
     },
   });
 
@@ -45,11 +44,11 @@ export default function Form(): React$Node {
     regexp: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/,
     validateEvent: 'blur',
     required: true,
-    label: intl.formatMessage({ id: 'contactForm.workName' }),
+    label: 'Work Email',
     value: '',
     errors: {
-      requiredError: intl.formatMessage({ id: 'input.requiredError' }),
-      regexpError: intl.formatMessage({ id: 'input.useValidEmail' }),
+      requiredError: 'This field is required',
+      regexpError: 'Please enter a valid email',
       defaultError: 'Please insert a valid email',
     },
   });
@@ -57,33 +56,33 @@ export default function Form(): React$Node {
   const phone = useInput({
     name: 'phone',
     required: true,
-    label: intl.formatMessage({ id: 'contactForm.phone' }),
+    label: 'Phone',
     value: '',
     errors: {
-      requiredError: intl.formatMessage({ id: 'input.requiredError' }),
+      requiredError: 'This field is required',
     },
   });
 
   const helpDescription = useInput({
     name: 'helpDescription',
-    label: intl.formatMessage({ id: 'contactForm.help' }),
+    label: 'How can we help you?',
     value: '',
     errors: {
-      requiredError: intl.formatMessage({ id: 'input.requiredError' }),
+      requiredError: 'This field is required',
     },
   });
 
   const refererDescription = useInput({
     name: 'refererDescription',
-    label: intl.formatMessage({ id: 'contactForm.hearAbout' }),
+    label: 'How did you hear about us?',
     value: '',
     errors: {
-      requiredError: intl.formatMessage({ id: 'input.requiredError' }),
+      requiredError: 'This field is required',
     },
   });
 
   const handleOnSubmit = useCallback(
-    (e) => {
+    async (e) => {
       e.preventDefault();
 
       const { errors, data } = validateData([
@@ -96,16 +95,22 @@ export default function Form(): React$Node {
       ]);
 
       if (!errors) {
-        fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        }).then(() => {
+        setPending(true);
+        try {
+          await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          });
           // eslint-disable-next-line no-alert
           alert('Form sent with success');
-        });
+        } catch (error) {
+          console.error('Error sending form:', error);
+        } finally {
+          setPending(false);
+        }
       }
     },
     [email, helpDescription, lastName, name, phone, refererDescription],
@@ -115,7 +120,9 @@ export default function Form(): React$Node {
     <div className={stylex(styles.card)}>
       <Padding horizontal={16} vertical={24}>
         <Flexbox flexDirection="column" rowGap={24}>
-          <Text type="h5" color="--neutral-color-800" id="contactForm.title" />
+          <Text type="h5" color="--neutral-color-800">
+            Contact Us
+          </Text>
           <form onSubmit={handleOnSubmit} autoComplete="nope">
             <input type="submit" style={{ display: 'none' }} />
             <Flexbox flexDirection="column" rowGap={24}>
@@ -143,7 +150,9 @@ export default function Form(): React$Node {
                 <Input input={refererDescription.input} />
               </div>
 
-              <Button intlId="contactForm.submit" onClick={handleOnSubmit} />
+              <Button onClick={handleOnSubmit} disabled={pending} loading={pending}>
+                Submit
+              </Button>
             </Flexbox>
           </form>
         </Flexbox>

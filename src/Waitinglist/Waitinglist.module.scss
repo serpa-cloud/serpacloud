@@ -1,0 +1,43 @@
+.container {
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  padding: 24px 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  margin-bottom: 16px;
+}
+
+.descriptionContainer {
+  margin-bottom: 24px;
+}
+
+.title {
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+}
+
+.input {
+  margin-bottom: 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre el input y el botón */
+}
