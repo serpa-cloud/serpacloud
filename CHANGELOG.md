@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/yellow-code-io/serpacloud/compare/v1.5.0...v1.6.0) (2024-10-28)
+
+
+### Features
+
+* add meta tags ([2265d0f](https://github.com/yellow-code-io/serpacloud/commit/2265d0f29cba1922b1ec86aa2a4be850c953423a))
+
 ## [1.5.0](https://github.com/yellow-code-io/serpacloud/compare/v1.4.5...v1.5.0) (2024-10-28)
 
 
