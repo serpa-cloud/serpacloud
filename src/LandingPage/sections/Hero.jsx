@@ -36,7 +36,7 @@ function Hero(): React$Node {
             <a href="#waitinglist" className="mainButton">
               Request Access
             </a>
-            <a href="https://app.serpa.cloud/demo" className="secondaryButton">
+            <a href="https://www.youtube.com/watch?v=yaaAJD75YAc" className="secondaryButton">
               See Demo
             </a>
           </div>
